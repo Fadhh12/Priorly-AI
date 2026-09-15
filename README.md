@@ -59,14 +59,28 @@ npm install
 npm run dev
 ```
 
-Frontend berjalan di `http://localhost:3000`, backend di `http://localhost:8000`.
+Frontend berjalan di `http://localhost:3000`, backend di `http://localhost:8000`. Begitu backend jalan, 5 "trader bot" otomatis mulai pasang order acak tiap 1-3 detik (lihat `backend/bot_simulator.py`) supaya order book, chart, dan trade feed langsung terlihat hidup tanpa perlu trader sungguhan.
+
+### API Singkat
+
+| Method | Endpoint | Deskripsi |
+|---|---|---|
+| GET | `/instruments` | List 10 saham + harga terakhir & %perubahan |
+| GET | `/orderbook/{symbol}` | Snapshot bid/ask teragregasi per level harga |
+| GET | `/candles/{symbol}` | Data OHLC + volume untuk chart |
+| POST | `/orders` | Submit order BUY/SELL |
+| DELETE | `/orders/{id}` | Cancel order yang masih OPEN/PARTIALLY_FILLED |
+| GET | `/orders/{trader_id}` | Riwayat order milik trader |
+| GET | `/trades/{symbol}` | Riwayat transaksi 1 simbol |
+| GET | `/traders/{trader_id}` | Saldo & posisi trader |
+| WS | `/ws` | Broadcast global: `orderbook_update`, `trade_executed`, `price_update` |
 
 ## Roadmap
 
 - [x] Setup struktur proyek (frontend + backend)
 - [x] Models & in-memory store
 - [x] Matching engine + unit test
-- [ ] REST API & WebSocket
+- [x] REST API & WebSocket + bot simulator
 - [ ] AI Market Insight (Gemini + fallback)
 - [ ] Home Page
 - [ ] Trading Dashboard
