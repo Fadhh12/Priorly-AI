@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;1,400&amp;family=Sora:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;background-color:#10131a;color:#e0e2ec;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "on-tertiary-fixed-variant": "#653e00",
+          "surface-container-low": "#191c23",
+          "primary-fixed": "#6ffbbe",
+          "on-secondary-fixed": "#40000d",
+          "surface-container": "#1d2027",
+          "surface-container-lowest": "#0b0e15",
+          "secondary-fixed-dim": "#ffb2b7",
+          "secondary-container": "#b50036",
+          "on-primary-container": "#00422b",
+          "on-surface": "#e0e2ec",
+          "surface-dim": "#10131a",
+          "surface": "#10131a",
+          "secondary": "#ffb2b7",
+          "on-primary-fixed-variant": "#005236",
+          "surface-tint": "#4edea3",
+          "on-secondary-fixed-variant": "#92002a",
+          "on-tertiary-fixed": "#2a1700",
+          "tertiary-fixed-dim": "#ffb95f",
+          "surface-container-highest": "#32353c",
+          "on-primary": "#003824",
+          "inverse-surface": "#e0e2ec",
+          "surface-container-high": "#272a31",
+          "on-tertiary-container": "#523200",
+          "surface-bright": "#363941",
+          "error": "#ffb4ab",
+          "inverse-on-surface": "#2d3038",
+          "on-error": "#690005",
+          "primary-container": "#10b981",
+          "surface-variant": "#32353c",
+          "on-background": "#e0e2ec",
+          "outline-variant": "#3c4a42",
+          "on-secondary": "#67001b",
+          "secondary-fixed": "#ffdadb",
+          "primary-fixed-dim": "#4edea3",
+          "on-secondary-container": "#ffc2c4",
+          "primary": "#4edea3",
+          "on-tertiary": "#472a00",
+          "on-primary-fixed": "#002113",
+          "on-error-container": "#ffdad6",
+          "tertiary": "#ffb95f",
+          "background": "#10131a",
+          "outline": "#86948a",
+          "tertiary-fixed": "#ffddb8",
+          "error-container": "#93000a",
+          "inverse-primary": "#006c49",
+          "on-surface-variant": "#bbcabf",
+          "tertiary-container": "#e29100"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.25rem",
+          "lg": "0.5rem",
+          "xl": "0.75rem",
+          "full": "9999px"
+        },
+        "spacing": {
+          "gutter": "0.25rem",
+          "margin": "0.5rem",
+          "space-md": "0.5rem",
+          "space-lg": "0.75rem",
+          "space-sm": "0.25rem",
+          "space-xs": "0.125rem",
+          "space-xl": "1rem"
+        },
+        "fontFamily": {
+          "data-md": [
+            "JetBrains Mono"
+          ],
+          "data-lg": [
+            "JetBrains Mono"
+          ],
+          "body-sm": [
+            "Sora"
+          ],
+          "body-md": [
+            "Sora"
+          ],
+          "headline-md": [
+            "Sora"
+          ],
+          "label-sm": [
+            "JetBrains Mono"
+          ],
+          "data-sm": [
+            "JetBrains Mono"
+          ],
+          "label-md": [
+            "Sora"
+          ],
+          "headline-lg": [
+            "Sora"
+          ],
+          "headline-sm": [
+            "Sora"
+          ],
+          "body-lg": [
+            "Sora"
+          ]
+        },
+        "fontSize": {
+          "data-md": [
+            "12px",
+            {
+              "lineHeight": "16px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "500"
+            }
+          ],
+          "data-lg": [
+            "16px",
+            {
+              "lineHeight": "20px",
+              "letterSpacing": "-0.02em",
+              "fontWeight": "500"
+            }
+          ],
+          "body-sm": [
+            "11px",
+            {
+              "lineHeight": "14px",
+              "letterSpacing": "0.01em",
+              "fontWeight": "400"
+            }
+          ],
+          "body-md": [
+            "12px",
+            {
+              "lineHeight": "16px",
+              "letterSpacing": "0em",
+              "fontWeight": "400"
+            }
+          ],
+          "headline-md": [
+            "18px",
+            {
+              "lineHeight": "24px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "600"
+            }
+          ],
+          "label-sm": [
+            "9px",
+            {
+              "lineHeight": "12px",
+              "letterSpacing": "0.06em",
+              "fontWeight": "600"
+            }
+          ],
+          "data-sm": [
+            "10px",
+            {
+              "lineHeight": "13px",
+              "letterSpacing": "0em",
+              "fontWeight": "400"
+            }
+          ],
+          "label-md": [
+            "11px",
+            {
+              "lineHeight": "14px",
+              "letterSpacing": "0.04em",
+              "fontWeight": "600"
+            }
+          ],
+          "headline-lg": [
+            "24px",
+            {
+              "lineHeight": "32px",
+              "letterSpacing": "-0.02em",
+              "fontWeight": "600"
+            }
+          ],
+          "headline-sm": [
+            "14px",
+            {
+              "lineHeight": "20px",
+              "letterSpacing": "0em",
+              "fontWeight": "600"
+            }
+          ],
+          "body-lg": [
+            "14px",
+            {
+              "lineHeight": "20px",
+              "letterSpacing": "0em",
+              "fontWeight": "400"
+            }
+          ]
+        }
+      },
+    },
+  }</script></head><body class="bg-surface font-body-md text-body-md text-on-surface select-none"><aside class="fixed left-0 top-0 h-full w-64 bg-surface-container-lowest border-r border-outline-variant/40 z-50 flex flex-col justify-between"><div class="flex flex-col"><div class="h-14 px-space-lg flex items-center justify-between border-b border-outline-variant/30 bg-surface-container-low"><div class="flex items-center gap-space-sm"><div class="w-2 h-5 bg-primary rounded-none"></div><span class="font-headline-sm text-headline-sm font-bold tracking-tight text-on-surface">TRADESIM</span><span class="font-label-sm text-label-sm px-space-xs py-0.5 bg-surface-container-highest text-on-surface-variant rounded-none border border-outline-variant/50">v1.2</span></div><div class="flex items-center gap-space-xs"><span class="w-2 h-2 rounded-none bg-primary animate-pulse"></span><span class="font-label-sm text-label-sm text-primary tracking-widest">LIVE</span></div></div><div class="px-space-md py-space-sm bg-surface-dim border-b border-outline-variant/20 flex items-center justify-between"><span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">WORKSPACE CORE</span><span class="font-data-sm text-data-sm text-on-surface-variant">RT-09</span></div><nav class="flex flex-col p-space-sm gap-space-xs" data-active-classes="bg-surface-container text-primary font-bold border-l-2 border-primary"><a class="flex items-center gap-space-md px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="trading-terminal" href="#"><span class="material-symbols-outlined text-[18px]">candlestick_chart</span><span class="font-body-md text-body-md uppercase tracking-wide">Trading Terminal</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="order-book-depth" href="#"><span class="material-symbols-outlined text-[18px]">format_align_center</span><span class="font-body-md text-body-md uppercase tracking-wide">Order Book &amp; Depth</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="portfolio-history" href="#"><span class="material-symbols-outlined text-[18px]">receipt_long</span><span class="font-body-md text-body-md uppercase tracking-wide">Portfolio &amp; History</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="engine-analytics" href="#"><span class="material-symbols-outlined text-[18px]">monitoring</span><span class="font-body-md text-body-md uppercase tracking-wide">Engine Analytics</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="api-docs" href="#"><span class="material-symbols-outlined text-[18px]">terminal</span><span class="font-body-md text-body-md uppercase tracking-wide">API &amp; Docs</span></a></nav></div><div class="flex flex-col border-t border-outline-variant/40 bg-surface-container-lowest p-space-md gap-space-sm"><div class="flex items-center justify-between pb-space-xs border-b border-outline-variant/20"><span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">SIMULATOR STATUS</span><span class="font-label-sm text-label-sm text-tertiary uppercase">STANDALONE</span></div><div class="flex flex-col gap-space-xs font-data-sm text-data-sm"><div class="flex justify-between items-center"><span class="text-on-surface-variant">Engine Latency:</span><span class="text-primary font-data-md text-data-md">12ms</span></div><div class="flex justify-between items-center"><span class="text-on-surface-variant">Matching Engine:</span><span class="text-on-surface">L3 Deterministic</span></div><div class="flex justify-between items-center"><span class="text-on-surface-variant">Memory State:</span><span class="text-on-surface">Heap 284MB</span></div></div><div class="grid grid-cols-2 gap-space-sm pt-space-xs"><button class="px-space-sm py-space-xs bg-surface-container-high hover:bg-surface-bright text-error font-body-sm text-body-sm border border-secondary-container/40 uppercase tracking-wider text-center" type="button">Reset State</button><button class="px-space-sm py-space-xs bg-surface-container-high hover:bg-surface-bright text-primary font-body-sm text-body-sm border border-outline-variant/40 uppercase tracking-wider text-center" type="button">Quick L2</button></div></div></aside><div class="pl-64 flex flex-col min-h-screen"><header class="fixed top-0 left-64 right-0 h-14 bg-surface-container-lowest/95 backdrop-blur-md border-b border-outline-variant/40 z-40 flex items-center justify-between px-space-lg"><div class="flex items-center gap-space-lg overflow-x-hidden whitespace-nowrap"><div class="flex items-center gap-space-sm pr-space-lg border-r border-outline-variant/30"><span class="font-label-sm text-label-sm text-outline uppercase">IDX TICKER</span><span class="w-1.5 h-1.5 bg-primary rounded-none animate-ping"></span></div><div class="flex items-center gap-space-xl font-data-sm text-data-sm"><div class="flex items-baseline gap-space-xs"><span class="text-on-surface font-semibold">IHSG</span><span class="text-on-surface">7,294.10</span><span class="text-primary">+0.42%</span></div><div class="flex items-baseline gap-space-xs"><span class="text-on-surface font-semibold">BBCA</span><span class="text-on-surface">10,150</span><span class="text-primary">+1.25%</span></div><div class="flex items-baseline gap-space-xs"><span class="text-on-surface font-semibold">TLKM</span><span class="text-on-surface">2,890</span><span class="text-secondary">-0.68%</span></div><div class="flex items-baseline gap-space-xs"><span class="text-on-surface font-semibold">GOTO</span><span class="text-on-surface">54</span><span class="text-primary">+3.85%</span></div></div></div><div class="flex items-center gap-space-lg flex-shrink-0"><div class="flex items-center gap-space-lg px-space-md py-space-xs bg-surface-container-low border border-outline-variant/30 font-data-sm text-data-sm"><div class="flex flex-col"><span class="font-label-sm text-label-sm text-outline uppercase">Buying Power</span><span class="text-on-surface font-semibold">Rp 100,000,000</span></div><div class="w-px h-6 bg-outline-variant/30"></div><div class="flex flex-col"><span class="font-label-sm text-label-sm text-outline uppercase">Portfolio Val</span><span class="text-on-surface font-semibold">Rp 142,500,000</span></div><div class="w-px h-6 bg-outline-variant/30"></div><div class="flex flex-col"><span class="font-label-sm text-label-sm text-outline uppercase">Unrealized PNL</span><span class="text-primary font-semibold">+Rp 4,250,000 (+3.07%)</span></div></div><div class="flex items-center gap-space-xs border-l border-outline-variant/30 pl-space-md"><button class="w-8 h-8 flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" type="button"><span class="material-symbols-outlined text-[18px]">grid_view</span></button><button class="w-8 h-8 flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors relative" type="button"><span class="material-symbols-outlined text-[18px]">notifications</span><span class="absolute top-1 right-1 w-1.5 h-1.5 bg-tertiary rounded-none"></span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-14 px-space-md pb-space-lg bg-surface flex-1 min-h-[calc(100vh-3.5rem)]"><div class="flex flex-col w-full">
+<div class="w-full flex items-center justify-between bg-surface-container-low px-space-lg py-space-sm mb-space-md shadow-sm">
+<div class="flex items-center gap-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="w-1.5 h-1.5 bg-primary"></span>
+<span class="font-headline-sm text-headline-sm tracking-tight text-on-surface uppercase">TradeSim Core API Reference</span>
+</div>
+<span class="font-label-sm text-label-sm bg-surface-container-highest text-primary px-space-sm py-space-xs">v1.2.0-STABLE</span>
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">REST • WEBSOCKET • TELEMETRY</span>
+</div>
+<div class="flex items-center gap-space-lg font-data-sm text-data-sm">
+<div class="flex items-center gap-space-xs">
+<span class="text-on-surface-variant">GATEWAY:</span>
+<span class="text-primary font-data-md text-data-md">127.0.0.1:8000</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="text-on-surface-variant">L3 LATENCY:</span>
+<span class="text-primary font-data-md text-data-md">&lt;140μs</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="text-on-surface-variant">AUTH:</span>
+<span class="text-tertiary font-data-md text-data-md">Ed25519 HMAC</span>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-12 gap-space-md w-full items-start">
+<aside class="col-span-12 lg:col-span-3 flex flex-col gap-space-xs bg-surface-container-low p-space-md shadow-sm sticky top-16">
+<div class="flex items-center justify-between pb-space-xs bg-surface-container-lowest px-space-sm py-space-xs">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">DOCS DIRECTORY</span>
+<span class="font-label-sm text-label-sm text-primary">SPEC_v1.2</span>
+</div>
+<div class="flex flex-col gap-space-xs mt-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase px-space-sm pt-space-xs">GETTING STARTED</span>
+<a class="flex items-center justify-between px-space-sm py-space-xs text-on-surface hover:bg-surface-container hover:text-primary transition-colors" href="#overview">
+<span class="font-body-md text-body-md">Overview &amp; Quickstart</span>
+<span class="font-label-sm text-label-sm text-outline">01</span>
+</a>
+<a class="flex items-center justify-between px-space-sm py-space-xs text-on-surface hover:bg-surface-container hover:text-primary transition-colors" href="#authentication">
+<span class="font-body-md text-body-md">Authentication &amp; Headers</span>
+<span class="font-label-sm text-label-sm text-outline">02</span>
+</a>
+</div>
+<div class="flex flex-col gap-space-xs mt-space-sm">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase px-space-sm pt-space-xs">REST ENDPOINTS (CORE)</span>
+<a class="flex items-center gap-space-sm px-space-sm py-space-xs text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" href="#endpoint-instruments">
+<span class="font-label-sm text-label-sm text-tertiary uppercase w-10">GET</span>
+<span class="font-data-sm text-data-sm truncate">/instruments</span>
+</a>
+<a class="flex items-center gap-space-sm px-space-sm py-space-xs text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" href="#endpoint-orderbook">
+<span class="font-label-sm text-label-sm text-tertiary uppercase w-10">GET</span>
+<span class="font-data-sm text-data-sm truncate">/orderbook/{s}</span>
+</a>
+<a class="flex items-center gap-space-sm px-space-sm py-space-xs bg-surface-container text-primary font-bold transition-colors" href="#endpoint-orders">
+<span class="font-label-sm text-label-sm text-primary uppercase w-10">POST</span>
+<span class="font-data-sm text-data-sm truncate">/orders</span>
+</a>
+<a class="flex items-center gap-space-sm px-space-sm py-space-xs text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" href="#endpoint-cancel">
+<span class="font-label-sm text-label-sm text-secondary uppercase w-10">DEL</span>
+<span class="font-data-sm text-data-sm truncate">/orders/{id}</span>
+</a>
+<a class="flex items-center gap-space-sm px-space-sm py-space-xs text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" href="#endpoint-trades">
+<span class="font-label-sm text-label-sm text-tertiary uppercase w-10">GET</span>
+<span class="font-data-sm text-data-sm truncate">/trades/{s}</span>
+</a>
+<a class="flex items-center gap-space-sm px-space-sm py-space-xs text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" href="#endpoint-ai">
+<span class="font-label-sm text-label-sm text-primary uppercase w-10">POST</span>
+<span class="font-data-sm text-data-sm truncate">/ai/insight</span>
+</a>
+</div>
+<div class="flex flex-col gap-space-xs mt-space-sm">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase px-space-sm pt-space-xs">WEBSOCKET FEED (/ws)</span>
+<a class="flex items-center justify-between px-space-sm py-space-xs text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" href="#ws-channels">
+<span class="font-body-md text-body-md">Channel Subscription</span>
+<span class="font-data-sm text-data-sm text-tertiary">WS</span>
+</a>
+<a class="flex items-center justify-between px-space-sm py-space-xs text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" href="#ws-book-delta">
+<span class="font-body-md text-body-md">Order Book Deltas</span>
+<span class="font-data-sm text-data-sm text-outline">L2/L3</span>
+</a>
+<a class="flex items-center justify-between px-space-sm py-space-xs text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" href="#ws-trades-broadcast">
+<span class="font-body-md text-body-md">Execution Stream</span>
+<span class="font-data-sm text-data-sm text-primary">TAPE</span>
+</a>
+</div>
+<div class="flex flex-col gap-space-xs mt-space-sm">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase px-space-sm pt-space-xs">SCHEMAS &amp; TYPES</span>
+<a class="flex items-center justify-between px-space-sm py-space-xs text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" href="#schemas">
+<span class="font-body-md text-body-md">Pydantic Core Models</span>
+<span class="font-label-sm text-label-sm text-outline">TYPE</span>
+</a>
+</div>
+<div class="mt-space-md p-space-sm bg-surface-container-lowest flex flex-col gap-space-xs">
+<div class="flex justify-between items-center">
+<span class="font-label-sm text-label-sm text-outline uppercase">RATE LIMIT POOL</span>
+<span class="font-data-sm text-data-sm text-primary">48,210 / 50k</span>
+</div>
+<div class="w-full h-1 bg-surface-container">
+<div class="h-1 bg-primary" style="width: 88%;"></div>
+</div>
+<span class="font-data-sm text-data-sm text-on-surface-variant">Deterministic memory-backed state active</span>
+</div>
+</aside>
+<div class="col-span-12 lg:col-span-9 flex flex-col gap-space-md">
+<section class="bg-surface-container-low p-space-lg shadow-sm flex flex-col gap-space-md" id="overview">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-md pb-space-sm bg-surface-container-lowest p-space-md">
+<div class="flex flex-col">
+<div class="flex items-center gap-space-sm">
+<span class="w-2 h-4 bg-primary"></span>
+<span class="font-headline-md text-headline-md font-bold uppercase text-on-surface">Institutional Order Routing Gateway</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-xs max-w-2xl">
+              High-throughput matching engine supporting microsecond order placement, L3 deterministic depth traversal, real-time Indonesian Stock Exchange (IDX) order ticks, and low-latency synthetic AI trade flow analysis.
+            </p>
+</div>
+<div class="flex items-center gap-space-sm flex-shrink-0">
+<span class="font-label-sm text-label-sm bg-surface-container px-space-sm py-space-xs text-tertiary">HTTPS STRICT</span>
+<span class="font-label-sm text-label-sm bg-surface-container px-space-sm py-space-xs text-primary">WSS SUPPORTED</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md pt-space-xs">
+<div class="bg-surface-container p-space-md flex flex-col gap-space-xs">
+<div class="flex justify-between items-center">
+<span class="font-label-sm text-label-sm text-outline uppercase">MATCHING SPEC</span>
+<span class="material-symbols-outlined text-[16px] text-primary">offline_bolt</span>
+</div>
+<span class="font-headline-sm text-headline-sm text-on-surface">Price-Time FIFO</span>
+<span class="font-data-sm text-data-sm text-on-surface-variant">Strict L3 order sequencer with nanosecond fill priorities</span>
+</div>
+<div class="bg-surface-container p-space-md flex flex-col gap-space-xs">
+<div class="flex justify-between items-center">
+<span class="font-label-sm text-label-sm text-outline uppercase">PROTOCOL BASE</span>
+<span class="material-symbols-outlined text-[16px] text-tertiary">hub</span>
+</div>
+<span class="font-headline-sm text-headline-sm text-on-surface">FastAPI Core v2</span>
+<span class="font-data-sm text-data-sm text-on-surface-variant">Async uvloop worker engine with deterministic heap allocations</span>
+</div>
+<div class="bg-surface-container p-space-md flex flex-col gap-space-xs">
+<div class="flex justify-between items-center">
+<span class="font-label-sm text-label-sm text-outline uppercase">AI ORCHESTRATION</span>
+<span class="material-symbols-outlined text-[16px] text-primary">psychology</span>
+</div>
+<span class="font-headline-sm text-headline-sm text-on-surface">Gemini 1.5 + Rule Engine</span>
+<span class="font-data-sm text-data-sm text-on-surface-variant">60s in-memory memory TTL with deterministic algorithmic fallback</span>
+</div>
+</div>
+</section>
+<section class="bg-surface-container-low p-space-lg shadow-sm flex flex-col gap-space-md" id="endpoint-orders">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm flex-wrap">
+<span class="font-label-md text-label-md px-space-md py-space-xs bg-primary text-on-primary font-bold">POST</span>
+<span class="font-data-lg text-data-lg text-on-surface tracking-tight">/api/v1/orders</span>
+<span class="font-label-sm text-label-sm bg-surface-container-highest text-on-surface-variant px-space-sm py-space-xs">IDEMPOTENT</span>
+</div>
+<span class="font-data-sm text-data-sm text-outline">Submit Limit / Market Execution Order</span>
+</div>
+<div class="bg-surface-container-lowest p-space-md flex flex-col md:flex-row items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm overflow-x-auto w-full">
+<span class="font-label-sm text-label-sm text-outline uppercase">BASE URL:</span>
+<span class="font-data-md text-data-md text-primary select-all">http://localhost:8000/api/v1/orders</span>
+</div>
+<div class="flex items-center gap-space-sm flex-shrink-0">
+<button class="px-space-md py-space-xs bg-primary hover:bg-primary-container text-on-primary font-headline-sm text-headline-sm font-bold uppercase transition-colors flex items-center gap-space-xs" id="btn-run-order" type="button">
+<span class="material-symbols-outlined text-[16px]">play_arrow</span>
+<span>Send Request</span>
+</button>
+<button class="px-space-md py-space-xs bg-surface-container-high hover:bg-surface-bright text-on-surface-variant font-body-sm text-body-sm uppercase transition-colors" id="btn-reset-order" type="button">
+              Reset
+            </button>
+</div>
+</div>
+<div class="grid grid-cols-1 xl:grid-cols-2 gap-space-md">
+<div class="flex flex-col bg-surface-container p-space-md gap-space-sm">
+<div class="flex items-center justify-between pb-space-xs bg-surface-container-lowest px-space-sm py-space-xs">
+<span class="font-label-sm text-label-sm text-outline uppercase">REQUEST BODY (APPLICATION/JSON)</span>
+<span class="font-label-sm text-label-sm text-primary">EDITABLE PAYLOAD</span>
+</div>
+<div class="relative bg-surface-container-lowest p-space-sm font-data-sm text-data-sm flex flex-col gap-space-xs">
+<div class="flex justify-between items-center text-outline">
+<span>// Fast-fill Limit Order schema</span>
+<span class="text-tertiary">BBCA • LOT SIZE: 100</span>
+</div>
+<textarea class="w-full bg-surface-dim font-data-sm text-data-sm text-on-surface p-space-sm resize-none focus:outline-none focus:bg-surface-container-lowest leading-relaxed text-left" id="order-payload" rows="9">{
+  "symbol": "BBCA",
+  "side": "BUY",
+  "type": "LIMIT",
+  "price": 10150,
+  "quantity": 25,
+  "trader_id": "TRADER_01",
+  "time_in_force": "GTC"
+}</textarea>
+<div class="flex items-center justify-between text-outline text-label-sm font-label-sm pt-space-xs">
+<span>Valid: side in ["BUY", "SELL"], type in ["LIMIT", "MARKET"]</span>
+<span class="text-primary font-bold">STATUS: READY</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-space-sm pt-space-xs">
+<div class="bg-surface-container-low p-space-sm flex flex-col">
+<span class="font-label-sm text-label-sm text-outline uppercase">TARGET LOTS</span>
+<span class="font-data-md text-data-md text-on-surface">2,500 Shares (25 lots)</span>
+</div>
+<div class="bg-surface-container-low p-space-sm flex flex-col">
+<span class="font-label-sm text-label-sm text-outline uppercase">ESTIMATED NOTIONAL</span>
+<span class="font-data-md text-data-md text-primary">Rp 25,375,000</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col bg-surface-container p-space-md gap-space-sm">
+<div class="flex items-center justify-between pb-space-xs bg-surface-container-lowest px-space-sm py-space-xs">
+<div class="flex items-center gap-space-sm">
+<span class="font-label-sm text-label-sm text-outline uppercase">LIVE RESPONSE RUNTIME</span>
+<span class="font-label-sm text-label-sm px-space-xs py-0.5 bg-primary text-on-primary font-bold" id="response-badge">201 CREATED</span>
+</div>
+<span class="font-data-sm text-data-sm text-on-surface-variant" id="response-time">Roundtrip: 142μs</span>
+</div>
+<div class="bg-surface-container-lowest p-space-sm font-data-sm text-data-sm min-h-[200px] flex flex-col justify-between overflow-x-auto">
+<pre class="font-data-sm text-data-sm text-on-surface leading-relaxed" id="response-output">{
+  "status": "success",
+  "data": {
+    "order_id": "ORD-202410-8849-AF12",
+    "symbol": "BBCA",
+    "side": "BUY",
+    "order_type": "LIMIT",
+    "price": 10150.0,
+    "quantity": 25,
+    "filled_quantity": 25,
+    "remaining_quantity": 0,
+    "execution_status": "FILLED",
+    "timestamp": "2024-10-24T14:32:01.442890Z",
+    "matched_trades": [
+      {
+        "trade_id": "TRD-IDX-990142",
+        "maker_order_id": "ORD-202410-7719-BB01",
+        "taker_order_id": "ORD-202410-8849-AF12",
+        "price": 10150.0,
+        "quantity": 25,
+        "counterparty_trader": "INST_LIQ_PROVIDER_4",
+        "liquidity": "TAKER",
+        "fee_idr": 38062.5
+      }
+    ]
+  }
+}</pre>
+<div class="flex items-center justify-between pt-space-sm text-label-sm font-label-sm bg-surface-container-low px-space-sm py-space-xs">
+<span class="text-on-surface-variant">L3 Matching Engine: Execution event published to ws://stream</span>
+<span class="text-primary font-bold">COMMITTED</span>
+</div>
+</div>
+<div class="flex items-center justify-between bg-surface-container-low p-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 bg-primary"></span>
+<span class="font-data-sm text-data-sm text-on-surface">Book state mutated: Ask liquidity decremented at 10,150</span>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary">CACHE SYNCED</span>
+</div>
+</div>
+</div>
+</section>
+<section class="bg-surface-container-low p-space-lg shadow-sm flex flex-col gap-space-md">
+<div class="flex flex-col md:flex-row md:items-center justify-between pb-space-xs bg-surface-container-lowest p-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="font-label-md text-label-md text-on-surface uppercase font-bold">CLIENT INTEGRATION ARTIFACTS</span>
+<span class="font-label-sm text-label-sm bg-surface-container px-space-sm py-space-xs text-on-surface-variant">MULTI-LANGUAGE RUNTIMES</span>
+</div>
+<div class="flex items-center gap-space-xs" id="code-tab-container">
+<button class="code-tab-btn px-space-md py-space-xs bg-primary text-on-primary font-label-sm text-label-sm font-bold uppercase transition-colors" data-tab="curl" type="button">cURL</button>
+<button class="code-tab-btn px-space-md py-space-xs bg-surface-container-high text-on-surface font-label-sm text-label-sm uppercase hover:bg-surface-bright transition-colors" data-tab="python" type="button">Python (Httpx)</button>
+<button class="code-tab-btn px-space-md py-space-xs bg-surface-container-high text-on-surface font-label-sm text-label-sm uppercase hover:bg-surface-bright transition-colors" data-tab="typescript" type="button">Next.js TS</button>
+</div>
+</div>
+<div class="relative bg-surface-container-lowest p-space-md font-data-sm text-data-sm">
+<div class="absolute top-space-md right-space-md">
+<button class="px-space-md py-space-xs bg-surface-container-high hover:bg-surface-bright text-primary font-label-sm text-label-sm flex items-center gap-space-xs transition-colors" id="copy-code-btn" type="button">
+<span class="material-symbols-outlined text-[14px]">content_copy</span>
+<span id="copy-label">COPY SNIPPET</span>
+</button>
+</div>
+<div class="code-block flex flex-col gap-space-xs" id="code-curl">
+<span class="text-outline font-label-sm text-label-sm uppercase">// Shell command execution via cURL</span>
+<pre class="text-on-surface leading-relaxed overflow-x-auto">curl -X POST "http://localhost:8000/api/v1/orders" \
+  -H "Content-Type: application/json" \
+  -H "X-API-KEY: ts_live_9f82ab27409cc" \
+  -H "X-TRADESIM-SIGNATURE: 7e2b9c5d8a014fe" \
+  -d '{
+    "symbol": "BBCA",
+    "side": "BUY",
+    "type": "LIMIT",
+    "price": 10150,
+    "quantity": 25,
+    "trader_id": "TRADER_01"
+  }'</pre>
+</div>
+<div class="code-block hidden flex flex-col gap-space-xs" id="code-python">
+<span class="text-outline font-label-sm text-label-sm uppercase">// Python 3.11+ High Performance Async Order Submission</span>
+<pre class="text-on-surface leading-relaxed overflow-x-auto">import httpx
+import asyncio
+
+async def submit_order():
+    url = "http://localhost:8000/api/v1/orders"
+    headers = {
+        "Content-Type": "application/json",
+        "X-API-KEY": "ts_live_9f82ab27409cc",
+        "X-TRADESIM-SIGNATURE": "7e2b9c5d8a014fe"
+    }
+    payload = {
+        "symbol": "BBCA",
+        "side": "BUY",
+        "type": "LIMIT",
+        "price": 10150,
+        "quantity": 25,
+        "trader_id": "TRADER_01"
+    }
+    async with httpx.AsyncClient(timeout=1.5) as client:
+        resp = await client.post(url, json=payload, headers=headers)
+        return resp.json()
+
+if __name__ == "__main__":
+    result = asyncio.run(submit_order())
+    print(f"Fill Status: {result['data']['execution_status']}")</pre>
+</div>
+<div class="code-block hidden flex flex-col gap-space-xs" id="code-typescript">
+<span class="text-outline font-label-sm text-label-sm uppercase">// Next.js / TypeScript App Router Implementation</span>
+<pre class="text-on-surface leading-relaxed overflow-x-auto">import { NextResponse } from 'next/server';
+
+interface OrderPayload {
+  symbol: string;
+  side: 'BUY' | 'SELL';
+  type: 'LIMIT' | 'MARKET';
+  price: number;
+  quantity: number;
+  trader_id: string;
+}
+
+export async function POST(req: Request) {
+  const body: OrderPayload = await req.json();
+  const gatewayRes = await fetch('http://localhost:8000/api/v1/orders', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'X-API-KEY': process.env.TRADESIM_API_KEY!,
+      'X-TRADESIM-SIGNATURE': process.env.TRADESIM_SECRET!
+    },
+    body: JSON.stringify(body)
+  });
+
+  const data = await gatewayRes.json();
+  return NextResponse.json(data, { status: gatewayRes.status });
+}</pre>
+</div>
+</div>
+</section>
+<section class="bg-surface-container-low p-space-lg shadow-sm flex flex-col gap-space-md" id="endpoint-ai">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm flex-wrap">
+<span class="font-label-md text-label-md px-space-md py-space-xs bg-primary text-on-primary font-bold">POST</span>
+<span class="font-data-lg text-data-lg text-on-surface tracking-tight">/api/v1/ai/insight</span>
+<span class="font-label-sm text-label-sm bg-surface-container-highest text-tertiary px-space-sm py-space-xs">HYBRID CACHED</span>
+</div>
+<span class="font-data-sm text-data-sm text-outline">Gemini 1.5 Flash Order Flow Synthesizer with Fallback</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<div class="flex flex-col bg-surface-container p-space-md gap-space-sm">
+<div class="flex items-center justify-between pb-space-xs bg-surface-container-lowest px-space-sm py-space-xs">
+<span class="font-label-sm text-label-sm text-outline uppercase">CACHE INVALIDATION POLICY</span>
+<span class="font-data-sm text-data-sm text-primary">TTL: 60 SECONDS</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface leading-relaxed">
+              Every request calculating order book imbalance and execution velocity is evaluated against an in-memory SHA256 state key of the current L2 snapshot.
+            </p>
+<div class="bg-surface-container-lowest p-space-sm flex flex-col gap-space-xs font-data-sm text-data-sm">
+<div class="flex justify-between items-center">
+<span class="text-on-surface-variant">Cache Key Formulation:</span>
+<span class="text-on-surface">hash(symbol + depth_fingerprint)</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-on-surface-variant">Cache Store:</span>
+<span class="text-primary font-bold">Zero-Copy In-Memory LRU</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-on-surface-variant">Hit Latency:</span>
+<span class="text-primary">&lt; 1.2ms</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col bg-surface-container p-space-md gap-space-sm">
+<div class="flex items-center justify-between pb-space-xs bg-surface-container-lowest px-space-sm py-space-xs">
+<span class="font-label-sm text-label-sm text-outline uppercase">RESILIENCE &amp; FALLBACK MATRIX</span>
+<span class="font-label-sm text-label-sm text-secondary">CIRCUIT BREAKER</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface leading-relaxed">
+              If upstream Gemini inference throttles (HTTP 429) or exceeds a 450ms budget, the gateway instantly falls back to local deterministic rule-based quantitative indicators.
+            </p>
+<div class="bg-surface-container-lowest p-space-sm flex flex-col gap-space-xs font-data-sm text-data-sm">
+<div class="flex justify-between items-center">
+<span class="text-on-surface-variant">Rule Engine Fallback:</span>
+<span class="text-tertiary">VWAP Imbalance + Order Delta</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-on-surface-variant">Degraded Execution:</span>
+<span class="text-on-surface">Zero downtime guaranteed</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-on-surface-variant">Header Indicator:</span>
+<span class="text-secondary font-data-md text-data-md">X-Inference-Source: LOCAL_RULE</span>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-md flex flex-col gap-space-xs font-data-sm text-data-sm">
+<span class="font-label-sm text-label-sm text-outline uppercase">// AI Synthesis Response Sample</span>
+<pre class="text-on-surface leading-relaxed overflow-x-auto">{
+  "symbol": "BBCA",
+  "generated_at": "2024-10-24T14:32:15.109Z",
+  "source": "GEMINI_1_5_FLASH",
+  "cache_hit": true,
+  "ttl_remaining_sec": 48,
+  "analysis": {
+    "market_regime": "ACCUMULATION_BULLISH",
+    "liquidity_skew": 0.68,
+    "confidence_score": 0.92,
+    "signals": [
+      "Aggressive bid clustering between 10125 and 10150 across institutional books",
+      "Spread compressed to 1 tick (Rp 25) with heavy absorbing buy orders"
+    ],
+    "suggested_action": "EXECUTE_LIMIT_BID",
+    "optimal_entry": 10150
+  }
+}</pre>
+</div>
+</section>
+<section class="bg-surface-container-low p-space-lg shadow-sm flex flex-col gap-space-md" id="ws-channels">
+<div class="flex flex-col md:flex-row md:items-center justify-between pb-space-xs bg-surface-container-lowest p-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="font-label-md text-label-md text-on-surface uppercase font-bold">WEBSOCKET HIGH-SPEED FEED PROTOCOL</span>
+<span class="font-label-sm text-label-sm bg-surface-container px-space-sm py-space-xs text-primary">ENDPOINT: /ws</span>
+</div>
+<span class="font-data-sm text-data-sm text-on-surface-variant">Protocol: RFC 6455 Binary + Text JSON</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<div class="bg-surface-container p-space-md flex flex-col gap-space-sm">
+<div class="flex justify-between items-center">
+<span class="font-label-sm text-label-sm text-outline uppercase">CHANNEL 01</span>
+<span class="font-label-sm text-label-sm text-primary">SUBSCRIBE</span>
+</div>
+<span class="font-headline-sm text-headline-sm text-on-surface">orderbook_delta</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Emits instantaneous bid/ask level mutations. Depth up to 20 levels. Zero allocations on socket writer.
+            </p>
+<div class="bg-surface-container-lowest p-space-xs font-data-sm text-data-sm text-outline">
+              Payload: <span class="text-primary">{ "action": "sub", "channel": "depth:BBCA" }</span>
+</div>
+</div>
+<div class="bg-surface-container p-space-md flex flex-col gap-space-sm">
+<div class="flex justify-between items-center">
+<span class="font-label-sm text-label-sm text-outline uppercase">CHANNEL 02</span>
+<span class="font-label-sm text-label-sm text-tertiary">BROADCAST</span>
+</div>
+<span class="font-headline-sm text-headline-sm text-on-surface">trade_executed</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Continuous live print of matching tape. Contains execution price, volume in lots, and aggressor side.
+            </p>
+<div class="bg-surface-container-lowest p-space-xs font-data-sm text-data-sm text-outline">
+              Payload: <span class="text-tertiary">{ "action": "sub", "channel": "trades:BBCA" }</span>
+</div>
+</div>
+<div class="bg-surface-container p-space-md flex flex-col gap-space-sm">
+<div class="flex justify-between items-center">
+<span class="font-label-sm text-label-sm text-outline uppercase">CHANNEL 03</span>
+<span class="font-label-sm text-label-sm text-secondary">TELEMETRY</span>
+</div>
+<span class="font-headline-sm text-headline-sm text-on-surface">engine_telemetry</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Diagnostic heartbeat measuring internal tick-to-trade latency, heap allocation, and ring buffer drift.
+            </p>
+<div class="bg-surface-container-lowest p-space-xs font-data-sm text-data-sm text-outline">
+              Payload: <span class="text-secondary">{ "action": "sub", "channel": "sys:engine" }</span>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-md font-data-sm text-data-sm flex flex-col gap-space-xs">
+<div class="flex justify-between items-center text-outline font-label-sm text-label-sm pb-space-xs">
+<span>// SAMPLE INCOMING WEBSOCKET FRAME: ORDER_BOOK_DELTA</span>
+<span class="text-primary">FRAME LENGTH: 124 BYTES</span>
+</div>
+<pre class="text-on-surface leading-relaxed overflow-x-auto">{
+  "e": "depthUpdate",
+  "E": 1729780321442,
+  "s": "BBCA",
+  "u": 9048122,
+  "b": [
+    ["10150.00", "420"],
+    ["10125.00", "1250"]
+  ],
+  "a": [
+    ["10175.00", "310"],
+    ["10200.00", "940"]
+  ]
+}</pre>
+</div>
+</section>
+<section class="bg-surface-container-low p-space-lg shadow-sm flex flex-col gap-space-md" id="schemas">
+<div class="flex items-center justify-between pb-space-xs bg-surface-container-lowest p-space-sm">
+<span class="font-label-md text-label-md text-on-surface uppercase font-bold">CORE PYDANTIC SCHEMAS (DATA CONTRACTS)</span>
+<span class="font-label-sm text-label-sm text-tertiary">STRICT VALIDATION ENABLED</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<div class="bg-surface-container p-space-md flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm text-primary uppercase">OrderCreateRequest</span>
+<pre class="font-data-sm text-data-sm text-on-surface bg-surface-container-lowest p-space-sm overflow-x-auto leading-relaxed">class OrderCreateRequest(BaseModel):
+    symbol: str = Field(..., max_length=10)
+    side: Literal["BUY", "SELL"]
+    type: Literal["LIMIT", "MARKET"]
+    price: Optional[float] = Field(None, gt=0)
+    quantity: int = Field(..., gt=0)
+    trader_id: str
+    time_in_force: Literal["GTC", "IOC", "FOK"] = "GTC"</pre>
+</div>
+<div class="bg-surface-container p-space-md flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm text-tertiary uppercase">ExecutionReport</span>
+<pre class="font-data-sm text-data-sm text-on-surface bg-surface-container-lowest p-space-sm overflow-x-auto leading-relaxed">class ExecutionReport(BaseModel):
+    order_id: str
+    execution_status: Literal["FILLED", "PARTIAL", "OPEN", "CANCELLED"]
+    filled_quantity: int
+    remaining_quantity: int
+    avg_fill_price: float
+    matched_trades: List[TradeFill] = []
+    timestamp: datetime = Field(default_factory=datetime.utcnow)</pre>
+</div>
+</div>
+</section>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    const tabs = document.querySelectorAll('.code-tab-btn');
+    const blocks = {
+      curl: document.getElementById('code-curl'),
+      python: document.getElementById('code-python'),
+      typescript: document.getElementById('code-typescript')
+    };
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        const target = tab.getAttribute('data-tab');
+        tabs.forEach(t => {
+          t.className = 'code-tab-btn px-space-md py-space-xs bg-surface-container-high text-on-surface font-label-sm text-label-sm uppercase hover:bg-surface-bright transition-colors';
+        });
+        tab.className = 'code-tab-btn px-space-md py-space-xs bg-primary text-on-primary font-label-sm text-label-sm font-bold uppercase transition-colors';
+
+        Object.keys(blocks).forEach(key => {
+          if (key === target) {
+            blocks[key].classList.remove('hidden');
+          } else {
+            blocks[key].classList.add('hidden');
+          }
+        });
+      });
+    });
+
+    const copyBtn = document.getElementById('copy-code-btn');
+    const copyLabel = document.getElementById('copy-label');
+    if (copyBtn) {
+      copyBtn.addEventListener('click', () => {
+        let activeText = '';
+        Object.keys(blocks).forEach(k => {
+          if (!blocks[k].classList.contains('hidden')) {
+            activeText = blocks[k].querySelector('pre').innerText;
+          }
+        });
+        navigator.clipboard.writeText(activeText).then(() => {
+          copyLabel.innerText = 'COPIED TO BUFFER';
+          setTimeout(() => {
+            copyLabel.innerText = 'COPY SNIPPET';
+          }, 2000);
+        });
+      });
+    }
+
+    const runBtn = document.getElementById('btn-run-order');
+    const resetBtn = document.getElementById('btn-reset-order');
+    const textarea = document.getElementById('order-payload');
+    const responseOutput = document.getElementById('response-output');
+    const responseBadge = document.getElementById('response-badge');
+    const responseTime = document.getElementById('response-time');
+
+    const defaultPayload = `{\n  "symbol": "BBCA",\n  "side": "BUY",\n  "type": "LIMIT",\n  "price": 10150,\n  "quantity": 25,\n  "trader_id": "TRADER_01",\n  "time_in_force": "GTC"\n}`;
+
+    if (resetBtn && textarea) {
+      resetBtn.addEventListener('click', () => {
+        textarea.value = defaultPayload;
+      });
+    }
+
+    if (runBtn && textarea && responseOutput) {
+      runBtn.addEventListener('click', () => {
+        runBtn.innerHTML = '<span class="material-symbols-outlined text-[16px] animate-spin">refresh</span><span>Executing...</span>';
+        
+        setTimeout(() => {
+          try {
+            const parsed = JSON.parse(textarea.value);
+            const isLimit = (parsed.type || '').toUpperCase() === 'LIMIT';
+            const price = parsed.price || 10150;
+            const qty = parsed.quantity || 25;
+            const side = parsed.side || 'BUY';
+            const id = 'ORD-202410-' + Math.floor(1000 + Math.random() * 9000) + '-E' + Math.floor(10 + Math.random() * 89);
+            const tradeId = 'TRD-IDX-' + Math.floor(100000 + Math.random() * 900000);
+            const micro = Math.floor(110 + Math.random() * 80);
+
+            const result = {
+              status: "success",
+              data: {
+                order_id: id,
+                symbol: parsed.symbol || "BBCA",
+                side: side,
+                order_type: isLimit ? "LIMIT" : "MARKET",
+                price: Number(price),
+                quantity: Number(qty),
+                filled_quantity: Number(qty),
+                remaining_quantity: 0,
+                execution_status: "FILLED",
+                timestamp: new Date().toISOString(),
+                matched_trades: [
+                  {
+                    trade_id: tradeId,
+                    maker_order_id: "ORD-202410-POOL-B4",
+                    taker_order_id: id,
+                    price: Number(price),
+                    quantity: Number(qty),
+                    counterparty_trader: "INST_LIQ_POOL",
+                    liquidity: "TAKER",
+                    fee_idr: Math.round(Number(price) * Number(qty) * 100 * 0.00015 * 100) / 100
+                  }
+                ]
+              }
+            };
+
+            responseOutput.innerText = JSON.stringify(result, null, 2);
+            responseBadge.className = 'font-label-sm text-label-sm px-space-xs py-0.5 bg-primary text-on-primary font-bold';
+            responseBadge.innerText = '201 CREATED';
+            responseTime.innerText = 'Roundtrip: ' + micro + 'µs';
+          } catch (e) {
+            responseBadge.className = 'font-label-sm text-label-sm px-space-xs py-0.5 bg-secondary-container text-on-secondary font-bold';
+            responseBadge.innerText = '400 BAD REQUEST';
+            responseOutput.innerText = JSON.stringify({
+              status: "error",
+              error: "MALFORMED_PAYLOAD",
+              detail: "Could not parse JSON body"
+            }, null, 2);
+            responseTime.innerText = 'Roundtrip: 42µs';
+          } finally {
+            runBtn.innerHTML = '<span class="material-symbols-outlined text-[16px]">play_arrow</span><span>Send Request</span>';
+          }
+        }, 180);
+      });
+    }
+  })();
+</script></main></div></body></html>

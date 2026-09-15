@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;1,400&amp;family=Sora:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;background-color:#10131a;color:#e0e2ec;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "on-tertiary-fixed-variant": "#653e00",
+          "surface-container-low": "#191c23",
+          "primary-fixed": "#6ffbbe",
+          "on-secondary-fixed": "#40000d",
+          "surface-container": "#1d2027",
+          "surface-container-lowest": "#0b0e15",
+          "secondary-fixed-dim": "#ffb2b7",
+          "secondary-container": "#b50036",
+          "on-primary-container": "#00422b",
+          "on-surface": "#e0e2ec",
+          "surface-dim": "#10131a",
+          "surface": "#10131a",
+          "secondary": "#ffb2b7",
+          "on-primary-fixed-variant": "#005236",
+          "surface-tint": "#4edea3",
+          "on-secondary-fixed-variant": "#92002a",
+          "on-tertiary-fixed": "#2a1700",
+          "tertiary-fixed-dim": "#ffb95f",
+          "surface-container-highest": "#32353c",
+          "on-primary": "#003824",
+          "inverse-surface": "#e0e2ec",
+          "surface-container-high": "#272a31",
+          "on-tertiary-container": "#523200",
+          "surface-bright": "#363941",
+          "error": "#ffb4ab",
+          "inverse-on-surface": "#2d3038",
+          "on-error": "#690005",
+          "primary-container": "#10b981",
+          "surface-variant": "#32353c",
+          "on-background": "#e0e2ec",
+          "outline-variant": "#3c4a42",
+          "on-secondary": "#67001b",
+          "secondary-fixed": "#ffdadb",
+          "primary-fixed-dim": "#4edea3",
+          "on-secondary-container": "#ffc2c4",
+          "primary": "#4edea3",
+          "on-tertiary": "#472a00",
+          "on-primary-fixed": "#002113",
+          "on-error-container": "#ffdad6",
+          "tertiary": "#ffb95f",
+          "background": "#10131a",
+          "outline": "#86948a",
+          "tertiary-fixed": "#ffddb8",
+          "error-container": "#93000a",
+          "inverse-primary": "#006c49",
+          "on-surface-variant": "#bbcabf",
+          "tertiary-container": "#e29100"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.25rem",
+          "lg": "0.5rem",
+          "xl": "0.75rem",
+          "full": "9999px"
+        },
+        "spacing": {
+          "gutter": "0.25rem",
+          "margin": "0.5rem",
+          "space-md": "0.5rem",
+          "space-lg": "0.75rem",
+          "space-sm": "0.25rem",
+          "space-xs": "0.125rem",
+          "space-xl": "1rem"
+        },
+        "fontFamily": {
+          "data-md": [
+            "JetBrains Mono"
+          ],
+          "data-lg": [
+            "JetBrains Mono"
+          ],
+          "body-sm": [
+            "Sora"
+          ],
+          "body-md": [
+            "Sora"
+          ],
+          "headline-md": [
+            "Sora"
+          ],
+          "label-sm": [
+            "JetBrains Mono"
+          ],
+          "data-sm": [
+            "JetBrains Mono"
+          ],
+          "label-md": [
+            "Sora"
+          ],
+          "headline-lg": [
+            "Sora"
+          ],
+          "headline-sm": [
+            "Sora"
+          ],
+          "body-lg": [
+            "Sora"
+          ]
+        },
+        "fontSize": {
+          "data-md": [
+            "12px",
+            {
+              "lineHeight": "16px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "500"
+            }
+          ],
+          "data-lg": [
+            "16px",
+            {
+              "lineHeight": "20px",
+              "letterSpacing": "-0.02em",
+              "fontWeight": "500"
+            }
+          ],
+          "body-sm": [
+            "11px",
+            {
+              "lineHeight": "14px",
+              "letterSpacing": "0.01em",
+              "fontWeight": "400"
+            }
+          ],
+          "body-md": [
+            "12px",
+            {
+              "lineHeight": "16px",
+              "letterSpacing": "0em",
+              "fontWeight": "400"
+            }
+          ],
+          "headline-md": [
+            "18px",
+            {
+              "lineHeight": "24px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "600"
+            }
+          ],
+          "label-sm": [
+            "9px",
+            {
+              "lineHeight": "12px",
+              "letterSpacing": "0.06em",
+              "fontWeight": "600"
+            }
+          ],
+          "data-sm": [
+            "10px",
+            {
+              "lineHeight": "13px",
+              "letterSpacing": "0em",
+              "fontWeight": "400"
+            }
+          ],
+          "label-md": [
+            "11px",
+            {
+              "lineHeight": "14px",
+              "letterSpacing": "0.04em",
+              "fontWeight": "600"
+            }
+          ],
+          "headline-lg": [
+            "24px",
+            {
+              "lineHeight": "32px",
+              "letterSpacing": "-0.02em",
+              "fontWeight": "600"
+            }
+          ],
+          "headline-sm": [
+            "14px",
+            {
+              "lineHeight": "20px",
+              "letterSpacing": "0em",
+              "fontWeight": "600"
+            }
+          ],
+          "body-lg": [
+            "14px",
+            {
+              "lineHeight": "20px",
+              "letterSpacing": "0em",
+              "fontWeight": "400"
+            }
+          ]
+        }
+      },
+    },
+  }</script></head><body class="bg-surface font-body-md text-body-md text-on-surface select-none"><aside class="fixed left-0 top-0 h-full w-64 bg-surface-container-lowest border-r border-outline-variant/40 z-50 flex flex-col justify-between"><div class="flex flex-col"><div class="h-14 px-space-lg flex items-center justify-between border-b border-outline-variant/30 bg-surface-container-low"><div class="flex items-center gap-space-sm"><div class="w-2 h-5 bg-primary rounded-none"></div><span class="font-headline-sm text-headline-sm font-bold tracking-tight text-on-surface">TRADESIM</span><span class="font-label-sm text-label-sm px-space-xs py-0.5 bg-surface-container-highest text-on-surface-variant rounded-none border border-outline-variant/50">v1.2</span></div><div class="flex items-center gap-space-xs"><span class="w-2 h-2 rounded-none bg-primary animate-pulse"></span><span class="font-label-sm text-label-sm text-primary tracking-widest">LIVE</span></div></div><div class="px-space-md py-space-sm bg-surface-dim border-b border-outline-variant/20 flex items-center justify-between"><span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">WORKSPACE CORE</span><span class="font-data-sm text-data-sm text-on-surface-variant">RT-09</span></div><nav class="flex flex-col p-space-sm gap-space-xs" data-active-classes="bg-surface-container text-primary font-bold border-l-2 border-primary"><a class="flex items-center gap-space-md px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="trading-terminal" href="#"><span class="material-symbols-outlined text-[18px]">candlestick_chart</span><span class="font-body-md text-body-md uppercase tracking-wide">Trading Terminal</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="order-book-depth" href="#"><span class="material-symbols-outlined text-[18px]">format_align_center</span><span class="font-body-md text-body-md uppercase tracking-wide">Order Book &amp; Depth</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="portfolio-history" href="#"><span class="material-symbols-outlined text-[18px]">receipt_long</span><span class="font-body-md text-body-md uppercase tracking-wide">Portfolio &amp; History</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="engine-analytics" href="#"><span class="material-symbols-outlined text-[18px]">monitoring</span><span class="font-body-md text-body-md uppercase tracking-wide">Engine Analytics</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="api-docs" href="#"><span class="material-symbols-outlined text-[18px]">terminal</span><span class="font-body-md text-body-md uppercase tracking-wide">API &amp; Docs</span></a></nav></div><div class="flex flex-col border-t border-outline-variant/40 bg-surface-container-lowest p-space-md gap-space-sm"><div class="flex items-center justify-between pb-space-xs border-b border-outline-variant/20"><span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">SIMULATOR STATUS</span><span class="font-label-sm text-label-sm text-tertiary uppercase">STANDALONE</span></div><div class="flex flex-col gap-space-xs font-data-sm text-data-sm"><div class="flex justify-between items-center"><span class="text-on-surface-variant">Engine Latency:</span><span class="text-primary font-data-md text-data-md">12ms</span></div><div class="flex justify-between items-center"><span class="text-on-surface-variant">Matching Engine:</span><span class="text-on-surface">L3 Deterministic</span></div><div class="flex justify-between items-center"><span class="text-on-surface-variant">Memory State:</span><span class="text-on-surface">Heap 284MB</span></div></div><div class="grid grid-cols-2 gap-space-sm pt-space-xs"><button class="px-space-sm py-space-xs bg-surface-container-high hover:bg-surface-bright text-error font-body-sm text-body-sm border border-secondary-container/40 uppercase tracking-wider text-center" type="button">Reset State</button><button class="px-space-sm py-space-xs bg-surface-container-high hover:bg-surface-bright text-primary font-body-sm text-body-sm border border-outline-variant/40 uppercase tracking-wider text-center" type="button">Quick L2</button></div></div></aside><div class="pl-64 flex flex-col min-h-screen"><header class="fixed top-0 left-64 right-0 h-14 bg-surface-container-lowest/95 backdrop-blur-md border-b border-outline-variant/40 z-40 flex items-center justify-between px-space-lg"><div class="flex items-center gap-space-lg overflow-x-hidden whitespace-nowrap"><div class="flex items-center gap-space-sm pr-space-lg border-r border-outline-variant/30"><span class="font-label-sm text-label-sm text-outline uppercase">IDX TICKER</span><span class="w-1.5 h-1.5 bg-primary rounded-none animate-ping"></span></div><div class="flex items-center gap-space-xl font-data-sm text-data-sm"><div class="flex items-baseline gap-space-xs"><span class="text-on-surface font-semibold">IHSG</span><span class="text-on-surface">7,294.10</span><span class="text-primary">+0.42%</span></div><div class="flex items-baseline gap-space-xs"><span class="text-on-surface font-semibold">BBCA</span><span class="text-on-surface">10,150</span><span class="text-primary">+1.25%</span></div><div class="flex items-baseline gap-space-xs"><span class="text-on-surface font-semibold">TLKM</span><span class="text-on-surface">2,890</span><span class="text-secondary">-0.68%</span></div><div class="flex items-baseline gap-space-xs"><span class="text-on-surface font-semibold">GOTO</span><span class="text-on-surface">54</span><span class="text-primary">+3.85%</span></div></div></div><div class="flex items-center gap-space-lg flex-shrink-0"><div class="flex items-center gap-space-lg px-space-md py-space-xs bg-surface-container-low border border-outline-variant/30 font-data-sm text-data-sm"><div class="flex flex-col"><span class="font-label-sm text-label-sm text-outline uppercase">Buying Power</span><span class="text-on-surface font-semibold">Rp 100,000,000</span></div><div class="w-px h-6 bg-outline-variant/30"></div><div class="flex flex-col"><span class="font-label-sm text-label-sm text-outline uppercase">Portfolio Val</span><span class="text-on-surface font-semibold">Rp 142,500,000</span></div><div class="w-px h-6 bg-outline-variant/30"></div><div class="flex flex-col"><span class="font-label-sm text-label-sm text-outline uppercase">Unrealized PNL</span><span class="text-primary font-semibold">+Rp 4,250,000 (+3.07%)</span></div></div><div class="flex items-center gap-space-xs border-l border-outline-variant/30 pl-space-md"><button class="w-8 h-8 flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" type="button"><span class="material-symbols-outlined text-[18px]">grid_view</span></button><button class="w-8 h-8 flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors relative" type="button"><span class="material-symbols-outlined text-[18px]">notifications</span><span class="absolute top-1 right-1 w-1.5 h-1.5 bg-tertiary rounded-none"></span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-14 px-space-md pb-space-lg bg-surface flex-1 min-h-[calc(100vh-3.5rem)]"><div class="flex flex-col w-full gap-space-md">
+<!-- Top Telemetry Ribbon / Quick Filter Bar -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm bg-surface-container-lowest px-space-md py-space-xs">
+<div class="flex items-center gap-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="w-1.5 h-1.5 bg-primary"></span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">PORTFOLIO ENGINE</span>
+</div>
+<span class="font-data-sm text-data-sm text-outline">SESSION: IDX_REG_T2</span>
+<span class="font-data-sm text-data-sm text-outline">BASE CURRENCY: IDR (Rp)</span>
+</div>
+<div class="flex items-center gap-space-sm font-data-sm text-data-sm">
+<span class="text-outline uppercase text-label-sm font-label-sm">SNAPSHOT:</span>
+<span class="text-on-surface font-semibold" id="clock-telemetry">15:42:08 WIB</span>
+<span class="px-space-xs py-0.5 bg-primary-container/20 text-primary font-label-sm text-label-sm">ACCOUNT #TRD-8829-IDX</span>
+</div>
+</div>
+<!-- 1. Portfolio Summary Cards Header (5 KPI Modules) -->
+<section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-gutter">
+<!-- Card 1: Total NAV -->
+<div class="relative flex flex-col justify-between bg-surface-container-low p-space-md overflow-hidden">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Net Asset Value (NAV)</span>
+<span class="material-symbols-outlined text-primary text-[16px]">account_balance_wallet</span>
+</div>
+<div class="mt-space-sm flex flex-col">
+<span class="font-data-lg text-data-lg font-bold text-on-surface tracking-tight">Rp 142,500,000</span>
+<div class="flex items-center gap-space-xs mt-space-xs font-data-sm text-data-sm">
+<span class="material-symbols-outlined text-primary text-[14px]">trending_up</span>
+<span class="text-primary font-semibold">+42.50%</span>
+<span class="text-outline">all-time ROI</span>
+</div>
+</div>
+<div class="w-full bg-surface-container-highest h-0.5 mt-space-sm overflow-hidden">
+<div class="bg-primary h-full w-[82%]"></div>
+</div>
+</div>
+<!-- Card 2: Buying Power / Cash -->
+<div class="relative flex flex-col justify-between bg-surface-container-low p-space-md overflow-hidden">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Buying Power (Cash)</span>
+<span class="material-symbols-outlined text-tertiary text-[16px]">payments</span>
+</div>
+<div class="mt-space-sm flex flex-col">
+<span class="font-data-lg text-data-lg font-bold text-on-surface tracking-tight">Rp 100,000,000</span>
+<div class="flex items-center gap-space-xs mt-space-xs font-data-sm text-data-sm">
+<span class="text-tertiary font-medium">70.18%</span>
+<span class="text-outline">of capital liquid</span>
+</div>
+</div>
+<div class="w-full bg-surface-container-highest h-0.5 mt-space-sm overflow-hidden">
+<div class="bg-tertiary h-full w-[70.18%]"></div>
+</div>
+</div>
+<!-- Card 3: Unrealized PnL -->
+<div class="relative flex flex-col justify-between bg-surface-container-low p-space-md overflow-hidden">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Unrealized P&amp;L</span>
+<span class="material-symbols-outlined text-primary text-[16px]">stacked_line_chart</span>
+</div>
+<div class="mt-space-sm flex flex-col">
+<span class="font-data-lg text-data-lg font-bold text-primary tracking-tight">+Rp 4,250,000</span>
+<div class="flex items-center gap-space-xs mt-space-xs font-data-sm text-data-sm">
+<span class="px-space-xs py-0.5 bg-primary/10 text-primary font-bold">+3.07%</span>
+<span class="text-outline">4 open pos</span>
+</div>
+</div>
+<div class="w-full bg-surface-container-highest h-0.5 mt-space-sm overflow-hidden">
+<div class="bg-primary h-full w-[65%]"></div>
+</div>
+</div>
+<!-- Card 4: Realized PnL Today -->
+<div class="relative flex flex-col justify-between bg-surface-container-low p-space-md overflow-hidden">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Realized P&amp;L Today</span>
+<span class="material-symbols-outlined text-primary text-[16px]">price_check</span>
+</div>
+<div class="mt-space-sm flex flex-col">
+<span class="font-data-lg text-data-lg font-bold text-primary tracking-tight">+Rp 1,820,000</span>
+<div class="flex items-center gap-space-xs mt-space-xs font-data-sm text-data-sm">
+<span class="text-primary font-medium">+1.29%</span>
+<span class="text-outline">3 closed today</span>
+</div>
+</div>
+<div class="w-full bg-surface-container-highest h-0.5 mt-space-sm overflow-hidden">
+<div class="bg-primary h-full w-[45%]"></div>
+</div>
+</div>
+<!-- Card 5: Daily VaR -->
+<div class="relative flex flex-col justify-between bg-surface-container-low p-space-md overflow-hidden">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Daily Value at Risk (95%)</span>
+<span class="material-symbols-outlined text-secondary text-[16px]">warning</span>
+</div>
+<div class="mt-space-sm flex flex-col">
+<span class="font-data-lg text-data-lg font-bold text-secondary tracking-tight">Rp 2,150,000</span>
+<div class="flex items-center gap-space-xs mt-space-xs font-data-sm text-data-sm">
+<span class="text-secondary font-medium">1.51%</span>
+<span class="text-outline">max 1D drawdown cap</span>
+</div>
+</div>
+<div class="w-full bg-surface-container-highest h-0.5 mt-space-sm overflow-hidden">
+<div class="bg-secondary-container h-full w-[35%]"></div>
+</div>
+</div>
+</section>
+<!-- 2 & 3. Main Workspace: Open Holdings (65%) & Allocation / Performance Metrics (35%) -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<!-- LEFT PANEL: Active Holdings Table (Portofolio Saham Terbuka) - 65% (8 cols) -->
+<div class="lg:col-span-8 flex flex-col bg-surface-container-low overflow-hidden">
+<!-- Panel Header Bar -->
+<div class="flex items-center justify-between bg-surface-container-lowest px-space-md py-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="w-1.5 h-3 bg-primary"></span>
+<h2 class="font-headline-sm text-headline-sm uppercase tracking-tight text-on-surface">Portofolio Saham Terbuka</h2>
+<span class="font-label-sm text-label-sm bg-surface-container-highest px-space-xs py-0.5 text-on-surface-variant">4 POSISI AKTIF</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<button class="flex items-center gap-space-xs px-space-sm py-0.5 bg-surface-container-high hover:bg-surface-bright text-on-surface font-body-sm text-body-sm uppercase transition-colors" id="btn-rebalance" type="button">
+<span class="material-symbols-outlined text-[14px]">tune</span>
+<span>Rebalance</span>
+</button>
+<button class="flex items-center gap-space-xs px-space-sm py-0.5 bg-surface-container-high hover:bg-surface-bright text-on-surface font-body-sm text-body-sm uppercase transition-colors" type="button">
+<span class="material-symbols-outlined text-[14px]">refresh</span>
+</button>
+</div>
+</div>
+<!-- Active Holdings Table Container -->
+<div class="overflow-x-auto w-full">
+<table class="w-full text-left font-data-sm text-data-sm whitespace-nowrap">
+<thead class="bg-surface-container-lowest font-label-sm text-label-sm uppercase tracking-wider text-outline">
+<tr>
+<th class="py-space-xs px-space-md">Simbol</th>
+<th class="py-space-xs px-space-sm text-right">Lot</th>
+<th class="py-space-xs px-space-sm text-right">Rata-rata Beli</th>
+<th class="py-space-xs px-space-sm text-right">Harga Terkini</th>
+<th class="py-space-xs px-space-sm text-right">Nilai Pasar</th>
+<th class="py-space-xs px-space-sm text-right">Unrealized P&amp;L</th>
+<th class="py-space-xs px-space-sm text-center">Trend 7D</th>
+<th class="py-space-xs px-space-sm text-right">Alokasi</th>
+<th class="py-space-xs px-space-md text-right">Aksi Cepat</th>
+</tr>
+</thead>
+<tbody class="divide-y-0">
+<!-- Row 1: BBCA -->
+<tr class="hover:bg-surface-container-high/60 transition-colors group">
+<td class="py-space-sm px-space-md font-semibold text-on-surface flex items-center gap-space-xs">
+<span class="w-1.5 h-1.5 bg-primary"></span>
+<span>BBCA</span>
+<span class="font-label-sm text-label-sm text-outline">Bank BCA</span>
+</td>
+<td class="py-space-sm px-space-sm text-right text-on-surface font-medium">188</td>
+<td class="py-space-sm px-space-sm text-right text-outline">9,850</td>
+<td class="py-space-sm px-space-sm text-right text-primary font-bold">10,150</td>
+<td class="py-space-sm px-space-sm text-right text-on-surface">Rp 19,082,000</td>
+<td class="py-space-sm px-space-sm text-right">
+<div class="flex flex-col items-end">
+<span class="text-primary font-bold">+Rp 564,000</span>
+<span class="text-label-sm font-label-sm text-primary">+3.05%</span>
+</div>
+</td>
+<td class="py-space-sm px-space-sm text-center">
+<!-- Mini Sparkline Green -->
+<svg class="w-16 h-4 inline-block overflow-visible" viewbox="0 0 60 16">
+<polyline fill="none" points="0,14 10,11 20,13 30,8 40,9 50,4 60,2" stroke="#4edea3" stroke-width="1.5"></polyline>
+</svg>
+</td>
+<td class="py-space-sm px-space-sm text-right">
+<div class="flex items-center justify-end gap-space-xs">
+<span class="text-on-surface">45.0%</span>
+<div class="w-10 bg-surface-container-highest h-1.5 overflow-hidden">
+<div class="bg-primary h-full w-[45%]"></div>
+</div>
+</div>
+</td>
+<td class="py-space-sm px-space-md text-right">
+<div class="flex items-center justify-end gap-space-xs">
+<button class="px-space-xs py-0.5 bg-primary-container text-on-primary font-body-sm text-body-sm font-bold hover:brightness-110 uppercase" onclick="quickAction('BUY', 'BBCA')" type="button">Beli</button>
+<button class="px-space-xs py-0.5 bg-secondary-container text-on-secondary-container font-body-sm text-body-sm font-bold hover:brightness-110 uppercase" onclick="quickAction('SELL', 'BBCA')" type="button">Jual</button>
+</div>
+</td>
+</tr>
+<!-- Row 2: BMRI -->
+<tr class="hover:bg-surface-container-high/60 transition-colors group bg-surface-container-lowest/30">
+<td class="py-space-sm px-space-md font-semibold text-on-surface flex items-center gap-space-xs">
+<span class="w-1.5 h-1.5 bg-primary"></span>
+<span>BMRI</span>
+<span class="font-label-sm text-label-sm text-outline">Bank Mandiri</span>
+</td>
+<td class="py-space-sm px-space-sm text-right text-on-surface font-medium">180</td>
+<td class="py-space-sm px-space-sm text-right text-outline">6,625</td>
+<td class="py-space-sm px-space-sm text-right text-primary font-bold">7,100</td>
+<td class="py-space-sm px-space-sm text-right text-on-surface">Rp 12,780,000</td>
+<td class="py-space-sm px-space-sm text-right">
+<div class="flex flex-col items-end">
+<span class="text-primary font-bold">+Rp 855,000</span>
+<span class="text-label-sm font-label-sm text-primary">+7.17%</span>
+</div>
+</td>
+<td class="py-space-sm px-space-sm text-center">
+<!-- Mini Sparkline Green -->
+<svg class="w-16 h-4 inline-block overflow-visible" viewbox="0 0 60 16">
+<polyline fill="none" points="0,15 12,12 25,14 38,7 48,6 60,1" stroke="#4edea3" stroke-width="1.5"></polyline>
+</svg>
+</td>
+<td class="py-space-sm px-space-sm text-right">
+<div class="flex items-center justify-end gap-space-xs">
+<span class="text-on-surface">30.0%</span>
+<div class="w-10 bg-surface-container-highest h-1.5 overflow-hidden">
+<div class="bg-primary h-full w-[30%]"></div>
+</div>
+</div>
+</td>
+<td class="py-space-sm px-space-md text-right">
+<div class="flex items-center justify-end gap-space-xs">
+<button class="px-space-xs py-0.5 bg-primary-container text-on-primary font-body-sm text-body-sm font-bold hover:brightness-110 uppercase" onclick="quickAction('BUY', 'BMRI')" type="button">Beli</button>
+<button class="px-space-xs py-0.5 bg-secondary-container text-on-secondary-container font-body-sm text-body-sm font-bold hover:brightness-110 uppercase" onclick="quickAction('SELL', 'BMRI')" type="button">Jual</button>
+</div>
+</td>
+</tr>
+<!-- Row 3: TLKM -->
+<tr class="hover:bg-surface-container-high/60 transition-colors group">
+<td class="py-space-sm px-space-md font-semibold text-on-surface flex items-center gap-space-xs">
+<span class="w-1.5 h-1.5 bg-secondary"></span>
+<span>TLKM</span>
+<span class="font-label-sm text-label-sm text-outline">Telkom Indo</span>
+</td>
+<td class="py-space-sm px-space-sm text-right text-on-surface font-medium">220</td>
+<td class="py-space-sm px-space-sm text-right text-outline">2,960</td>
+<td class="py-space-sm px-space-sm text-right text-secondary font-bold">2,890</td>
+<td class="py-space-sm px-space-sm text-right text-on-surface">Rp 6,358,000</td>
+<td class="py-space-sm px-space-sm text-right">
+<div class="flex flex-col items-end">
+<span class="text-secondary font-bold">-Rp 154,000</span>
+<span class="text-label-sm font-label-sm text-secondary">-2.36%</span>
+</div>
+</td>
+<td class="py-space-sm px-space-sm text-center">
+<!-- Mini Sparkline Red -->
+<svg class="w-16 h-4 inline-block overflow-visible" viewbox="0 0 60 16">
+<polyline fill="none" points="0,3 15,4 28,9 40,8 50,13 60,15" stroke="#ffb2b7" stroke-width="1.5"></polyline>
+</svg>
+</td>
+<td class="py-space-sm px-space-sm text-right">
+<div class="flex items-center justify-end gap-space-xs">
+<span class="text-on-surface">15.0%</span>
+<div class="w-10 bg-surface-container-highest h-1.5 overflow-hidden">
+<div class="bg-tertiary h-full w-[15%]"></div>
+</div>
+</div>
+</td>
+<td class="py-space-sm px-space-md text-right">
+<div class="flex items-center justify-end gap-space-xs">
+<button class="px-space-xs py-0.5 bg-primary-container text-on-primary font-body-sm text-body-sm font-bold hover:brightness-110 uppercase" onclick="quickAction('BUY', 'TLKM')" type="button">Beli</button>
+<button class="px-space-xs py-0.5 bg-secondary-container text-on-secondary-container font-body-sm text-body-sm font-bold hover:brightness-110 uppercase" onclick="quickAction('SELL', 'TLKM')" type="button">Jual</button>
+</div>
+</td>
+</tr>
+<!-- Row 4: ANTM -->
+<tr class="hover:bg-surface-container-high/60 transition-colors group bg-surface-container-lowest/30">
+<td class="py-space-sm px-space-md font-semibold text-on-surface flex items-center gap-space-xs">
+<span class="w-1.5 h-1.5 bg-tertiary"></span>
+<span>ANTM</span>
+<span class="font-label-sm text-label-sm text-outline">Aneka Tambang</span>
+</td>
+<td class="py-space-sm px-space-sm text-right text-on-surface font-medium">272</td>
+<td class="py-space-sm px-space-sm text-right text-outline">1,540</td>
+<td class="py-space-sm px-space-sm text-right text-tertiary font-bold">1,570</td>
+<td class="py-space-sm px-space-sm text-right text-on-surface">Rp 4,270,400</td>
+<td class="py-space-sm px-space-sm text-right">
+<div class="flex flex-col items-end">
+<span class="text-primary font-bold">+Rp 81,600</span>
+<span class="text-label-sm font-label-sm text-primary">+1.95%</span>
+</div>
+</td>
+<td class="py-space-sm px-space-sm text-center">
+<!-- Mini Sparkline Flat/Amber -->
+<svg class="w-16 h-4 inline-block overflow-visible" viewbox="0 0 60 16">
+<polyline fill="none" points="0,10 15,12 30,6 45,9 52,7 60,5" stroke="#ffb95f" stroke-width="1.5"></polyline>
+</svg>
+</td>
+<td class="py-space-sm px-space-sm text-right">
+<div class="flex items-center justify-end gap-space-xs">
+<span class="text-on-surface">10.0%</span>
+<div class="w-10 bg-surface-container-highest h-1.5 overflow-hidden">
+<div class="bg-surface-variant h-full w-[10%]"></div>
+</div>
+</div>
+</td>
+<td class="py-space-sm px-space-md text-right">
+<div class="flex items-center justify-end gap-space-xs">
+<button class="px-space-xs py-0.5 bg-primary-container text-on-primary font-body-sm text-body-sm font-bold hover:brightness-110 uppercase" onclick="quickAction('BUY', 'ANTM')" type="button">Beli</button>
+<button class="px-space-xs py-0.5 bg-secondary-container text-on-secondary-container font-body-sm text-body-sm font-bold hover:brightness-110 uppercase" onclick="quickAction('SELL', 'ANTM')" type="button">Jual</button>
+</div>
+</td>
+</tr>
+</tbody>
+<tfoot class="bg-surface-container-lowest font-data-sm text-data-sm">
+<tr>
+<td class="py-space-sm px-space-md font-bold uppercase text-outline">Total Terbuka</td>
+<td class="py-space-sm px-space-sm text-right font-bold text-on-surface">860 Lot</td>
+<td class="py-space-sm px-space-sm text-right text-outline" colspan="2">Ekuitas Aktif</td>
+<td class="py-space-sm px-space-sm text-right font-bold text-on-surface">Rp 42,490,400</td>
+<td class="py-space-sm px-space-sm text-right font-bold text-primary">+Rp 1,346,600</td>
+<td class="py-space-sm px-space-md text-right text-outline text-label-sm font-label-sm" colspan="3">VALUASI REAL-TIME MTM</td>
+</tr>
+</tfoot>
+</table>
+</div>
+<!-- Tactical Risk & Leverage Note Footer -->
+<div class="p-space-sm bg-surface-container-lowest/80 flex items-center justify-between text-outline font-data-sm text-data-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[14px] text-tertiary">shield</span>
+<span>Margin Leverage: 1.0x (Cash Account) • Settlement Reg: T+2</span>
+</div>
+<span class="text-label-sm font-label-sm text-primary uppercase">Portfolio Health: Optimal (0 Margin Calls)</span>
+</div>
+</div>
+<!-- RIGHT PANEL: Asset Allocation & Performance Telemetry - 35% (4 cols) -->
+<div class="lg:col-span-4 flex flex-col gap-gutter">
+<!-- Top Subpanel: Asset Allocation Breakdown -->
+<div class="bg-surface-container-low p-space-md flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="w-1.5 h-3 bg-tertiary"></span>
+<span class="font-headline-sm text-headline-sm uppercase tracking-tight text-on-surface">Asset Allocation</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline uppercase">EQUITY DISTRIBUTION</span>
+</div>
+<div class="flex items-center justify-between gap-space-md pt-space-xs">
+<!-- Donut SVG Vector (Terminal Color Semantics: Emerald, Amber, Charcoal, Crimson) -->
+<div class="relative w-28 h-28 flex-shrink-0 flex items-center justify-center">
+<svg class="w-full h-full -rotate-90" viewbox="0 0 36 36">
+<!-- Base Track -->
+<path class="text-surface-container-highest" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-width="4.5"></path>
+<!-- BBCA: 45% (Emerald primary) -->
+<path class="text-primary" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-dasharray="45, 100" stroke-width="4.5"></path>
+<!-- BMRI: 30% (Amber tertiary) dashoffset = -(45) -->
+<path class="text-tertiary" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-dasharray="30, 100" stroke-dashoffset="-45" stroke-width="4.5"></path>
+<!-- TLKM: 15% (Secondary crimson) dashoffset = -(75) -->
+<path class="text-secondary" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-dasharray="15, 100" stroke-dashoffset="-75" stroke-width="4.5"></path>
+<!-- ANTM: 10% (Surface bright / slate) dashoffset = -(90) -->
+<path class="text-surface-bright" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-dasharray="10, 100" stroke-dashoffset="-90" stroke-width="4.5"></path>
+</svg>
+<div class="absolute inset-0 flex flex-col items-center justify-center pointer-events-none">
+<span class="font-data-md text-data-md font-bold text-on-surface">4</span>
+<span class="font-label-sm text-label-sm text-outline">EMITEN</span>
+</div>
+</div>
+<!-- Allocation Legend & Weights -->
+<div class="flex flex-col gap-space-xs flex-1 font-data-sm text-data-sm">
+<div class="flex items-center justify-between">
+<span class="flex items-center gap-space-xs text-on-surface">
+<span class="w-2 h-2 bg-primary"></span>
+<span>BBCA</span>
+</span>
+<span class="font-semibold text-on-surface">45.0% <span class="text-outline font-normal">Rp 19.0M</span></span>
+</div>
+<div class="flex items-center justify-between">
+<span class="flex items-center gap-space-xs text-on-surface">
+<span class="w-2 h-2 bg-tertiary"></span>
+<span>BMRI</span>
+</span>
+<span class="font-semibold text-on-surface">30.0% <span class="text-outline font-normal">Rp 12.8M</span></span>
+</div>
+<div class="flex items-center justify-between">
+<span class="flex items-center gap-space-xs text-on-surface">
+<span class="w-2 h-2 bg-secondary"></span>
+<span>TLKM</span>
+</span>
+<span class="font-semibold text-on-surface">15.0% <span class="text-outline font-normal">Rp 6.35M</span></span>
+</div>
+<div class="flex items-center justify-between">
+<span class="flex items-center gap-space-xs text-on-surface">
+<span class="w-2 h-2 bg-surface-bright"></span>
+<span>ANTM</span>
+</span>
+<span class="font-semibold text-on-surface">10.0% <span class="text-outline font-normal">Rp 4.27M</span></span>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Subpanel: Algorithmic Execution & Performance Telemetry -->
+<div class="bg-surface-container-low p-space-md flex flex-col gap-space-sm flex-1">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="w-1.5 h-3 bg-primary"></span>
+<span class="font-headline-sm text-headline-sm uppercase tracking-tight text-on-surface">Telemetry Metrics</span>
+</div>
+<span class="font-label-sm text-label-sm text-primary uppercase">EXECUTION AUDIT</span>
+</div>
+<!-- 4 Grid KPI Cards -->
+<div class="grid grid-cols-2 gap-gutter">
+<div class="bg-surface-container-lowest p-space-sm flex flex-col">
+<span class="font-label-sm text-label-sm text-outline uppercase">Win Rate</span>
+<span class="font-data-lg text-data-lg font-bold text-primary mt-space-xs">68.4%</span>
+<span class="font-data-sm text-data-sm text-on-surface-variant">97W / 45L</span>
+</div>
+<div class="bg-surface-container-lowest p-space-sm flex flex-col">
+<span class="font-label-sm text-label-sm text-outline uppercase">Profit Factor</span>
+<span class="font-data-lg text-data-lg font-bold text-primary mt-space-xs">2.14</span>
+<span class="font-data-sm text-data-sm text-on-surface-variant">Gross PnL Ratio</span>
+</div>
+<div class="bg-surface-container-lowest p-space-sm flex flex-col">
+<span class="font-label-sm text-label-sm text-outline uppercase">Max Drawdown</span>
+<span class="font-data-lg text-data-lg font-bold text-secondary mt-space-xs">-4.2%</span>
+<span class="font-data-sm text-data-sm text-on-surface-variant">Peak-to-Trough</span>
+</div>
+<div class="bg-surface-container-lowest p-space-sm flex flex-col">
+<span class="font-label-sm text-label-sm text-outline uppercase">Trades Executed</span>
+<span class="font-data-lg text-data-lg font-bold text-on-surface mt-space-xs">142</span>
+<span class="font-data-sm text-data-sm text-on-surface-variant">Cumulative IDX</span>
+</div>
+</div>
+<!-- Mini PnL Timeline Trend -->
+<div class="bg-surface-container-lowest p-space-sm flex flex-col gap-space-xs">
+<div class="flex items-center justify-between font-label-sm text-label-sm text-outline uppercase">
+<span>Cumulative Alpha Growth (30D)</span>
+<span class="text-primary font-bold">+18.9% α</span>
+</div>
+<div class="w-full h-10 flex items-end gap-1 pt-1">
+<div class="flex-1 bg-primary/20 hover:bg-primary h-[35%] transition-all"></div>
+<div class="flex-1 bg-primary/30 hover:bg-primary h-[48%] transition-all"></div>
+<div class="flex-1 bg-secondary/30 hover:bg-secondary h-[22%] transition-all"></div>
+<div class="flex-1 bg-primary/40 hover:bg-primary h-[60%] transition-all"></div>
+<div class="flex-1 bg-primary/50 hover:bg-primary h-[75%] transition-all"></div>
+<div class="flex-1 bg-secondary/40 hover:bg-secondary h-[40%] transition-all"></div>
+<div class="flex-1 bg-primary/60 hover:bg-primary h-[82%] transition-all"></div>
+<div class="flex-1 bg-primary/80 hover:bg-primary h-[94%] transition-all"></div>
+<div class="flex-1 bg-primary hover:brightness-125 h-[100%] transition-all"></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 4. Bottom Full-width: Riwayat Transaksi Lengkap (Executed Trades History Log) -->
+<section class="flex flex-col bg-surface-container-low overflow-hidden">
+<!-- Log Header and Filters -->
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-sm bg-surface-container-lowest px-space-md py-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="w-1.5 h-3 bg-outline"></span>
+<h2 class="font-headline-sm text-headline-sm uppercase tracking-tight text-on-surface">Riwayat Transaksi Lengkap</h2>
+<span class="font-label-sm text-label-sm bg-surface-container-highest px-space-xs py-0.5 text-on-surface-variant font-data-sm" id="records-counter">TOTAL: 6 EKSEKUSI TERKINI</span>
+</div>
+<!-- Controls: Filter Chips, Date, Download CSV -->
+<div class="flex flex-wrap items-center gap-space-sm">
+<!-- Side Filters -->
+<div class="flex items-center bg-surface-container-high p-0.5" id="side-filters">
+<button class="filter-btn px-space-sm py-0.5 text-label-sm font-label-sm uppercase bg-surface-container-lowest text-primary font-bold" data-filter="ALL" type="button">Semua</button>
+<button class="filter-btn px-space-sm py-0.5 text-label-sm font-label-sm uppercase text-on-surface-variant hover:text-on-surface" data-filter="BUY" type="button">Beli</button>
+<button class="filter-btn px-space-sm py-0.5 text-label-sm font-label-sm uppercase text-on-surface-variant hover:text-on-surface" data-filter="SELL" type="button">Jual</button>
+</div>
+<!-- Date Range Display Mock -->
+<div class="flex items-center gap-space-xs px-space-sm py-0.5 bg-surface-container-high text-on-surface-variant font-data-sm text-data-sm">
+<span class="material-symbols-outlined text-[14px]">calendar_today</span>
+<span class="text-on-surface">2025-01-01 / 2025-02-18</span>
+</div>
+<!-- CSV Export Button -->
+<button class="flex items-center gap-space-xs px-space-sm py-0.5 bg-surface-container-high hover:bg-surface-bright text-primary font-body-sm text-body-sm uppercase transition-colors" id="btn-export-csv" type="button">
+<span class="material-symbols-outlined text-[14px]">download</span>
+<span>Unduh CSV</span>
+</button>
+</div>
+</div>
+<!-- History Data Table Container -->
+<div class="overflow-x-auto w-full">
+<table class="w-full text-left font-data-sm text-data-sm whitespace-nowrap" id="history-table">
+<thead class="bg-surface-container-lowest font-label-sm text-label-sm uppercase tracking-wider text-outline">
+<tr>
+<th class="py-space-xs px-space-md">Timestamp (WIB)</th>
+<th class="py-space-xs px-space-sm">Order ID</th>
+<th class="py-space-xs px-space-sm">Simbol</th>
+<th class="py-space-xs px-space-sm">Side</th>
+<th class="py-space-xs px-space-sm text-right">Harga Eksekusi</th>
+<th class="py-space-xs px-space-sm text-right">Lot</th>
+<th class="py-space-xs px-space-sm text-right">Nilai Total</th>
+<th class="py-space-xs px-space-sm text-right">Broker Fee (0.15%)</th>
+<th class="py-space-xs px-space-md text-center">Status</th>
+</tr>
+</thead>
+<tbody class="divide-y-0" id="history-table-body">
+<!-- Row 1 -->
+<tr class="history-row hover:bg-surface-container-high/50 transition-colors" data-side="BUY">
+<td class="py-space-sm px-space-md text-outline">2025-02-18 14:28:44</td>
+<td class="py-space-sm px-space-sm text-on-surface-variant font-semibold">#TS-89421</td>
+<td class="py-space-sm px-space-sm text-on-surface font-bold">BBCA</td>
+<td class="py-space-sm px-space-sm">
+<span class="px-space-xs py-0.5 bg-primary-container/20 text-primary font-bold text-label-sm font-label-sm">BELI</span>
+</td>
+<td class="py-space-sm px-space-sm text-right text-on-surface">10,125</td>
+<td class="py-space-sm px-space-sm text-right text-on-surface">40</td>
+<td class="py-space-sm px-space-sm text-right text-on-surface font-semibold">Rp 40,500,000</td>
+<td class="py-space-sm px-space-sm text-right text-outline">Rp 60,750</td>
+<td class="py-space-sm px-space-md text-center">
+<span class="px-space-xs py-0.5 bg-primary/10 text-primary text-label-sm font-label-sm">FILLED</span>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="history-row hover:bg-surface-container-high/50 transition-colors bg-surface-container-lowest/30" data-side="SELL">
+<td class="py-space-sm px-space-md text-outline">2025-02-18 11:15:02</td>
+<td class="py-space-sm px-space-sm text-on-surface-variant font-semibold">#TS-89398</td>
+<td class="py-space-sm px-space-sm text-on-surface font-bold">GOTO</td>
+<td class="py-space-sm px-space-sm">
+<span class="px-space-xs py-0.5 bg-secondary-container/30 text-secondary font-bold text-label-sm font-label-sm">JUAL</span>
+</td>
+<td class="py-space-sm px-space-sm text-right text-on-surface">54</td>
+<td class="py-space-sm px-space-sm text-right text-on-surface">1,500</td>
+<td class="py-space-sm px-space-sm text-right text-on-surface font-semibold">Rp 8,100,000</td>
+<td class="py-space-sm px-space-sm text-right text-outline">Rp 12,150</td>
+<td class="py-space-sm px-space-md text-center">
+<span class="px-space-xs py-0.5 bg-primary/10 text-primary text-label-sm font-label-sm">FILLED</span>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="history-row hover:bg-surface-container-high/50 transition-colors" data-side="BUY">
+<td class="py-space-sm px-space-md text-outline">2025-02-18 09:42:19</td>
+<td class="py-space-sm px-space-sm text-on-surface-variant font-semibold">#TS-89354</td>
+<td class="py-space-sm px-space-sm text-on-surface font-bold">BMRI</td>
+<td class="py-space-sm px-space-sm">
+<span class="px-space-xs py-0.5 bg-primary-container/20 text-primary font-bold text-label-sm font-label-sm">BELI</span>
+</td>
+<td class="py-space-sm px-space-sm text-right text-on-surface">7,075</td>
+<td class="py-space-sm px-space-sm text-right text-on-surface">80</td>
+<td class="py-space-sm px-space-sm text-right text-on-surface font-semibold">Rp 56,600,000</td>
+<td class="py-space-sm px-space-sm text-right text-outline">Rp 84,900</td>
+<td class="py-space-sm px-space-md text-center">
+<span class="px-space-xs py-0.5 bg-primary/10 text-primary text-label-sm font-label-sm">FILLED</span>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="history-row hover:bg-surface-container-high/50 transition-colors bg-surface-container-lowest/30" data-side="SELL">
+<td class="py-space-sm px-space-md text-outline">2025-02-17 15:10:11</td>
+<td class="py-space-sm px-space-sm text-on-surface-variant font-semibold">#TS-89210</td>
+<td class="py-space-sm px-space-sm text-on-surface font-bold">ASII</td>
+<td class="py-space-sm px-space-sm">
+<span class="px-space-xs py-0.5 bg-secondary-container/30 text-secondary font-bold text-label-sm font-label-sm">JUAL</span>
+</td>
+<td class="py-space-sm px-space-sm text-right text-on-surface">5,125</td>
+<td class="py-space-sm px-space-sm text-right text-on-surface">50</td>
+<td class="py-space-sm px-space-sm text-right text-on-surface font-semibold">Rp 25,625,000</td>
+<td class="py-space-sm px-space-sm text-right text-outline">Rp 38,438</td>
+<td class="py-space-sm px-space-md text-center">
+<span class="px-space-xs py-0.5 bg-tertiary-container/30 text-tertiary text-label-sm font-label-sm">PARTIAL</span>
+</td>
+</tr>
+<!-- Row 5 -->
+<tr class="history-row hover:bg-surface-container-high/50 transition-colors" data-side="BUY">
+<td class="py-space-sm px-space-md text-outline">2025-02-17 10:04:30</td>
+<td class="py-space-sm px-space-sm text-on-surface-variant font-semibold">#TS-89145</td>
+<td class="py-space-sm px-space-sm text-on-surface font-bold">TLKM</td>
+<td class="py-space-sm px-space-sm">
+<span class="px-space-xs py-0.5 bg-primary-container/20 text-primary font-bold text-label-sm font-label-sm">BELI</span>
+</td>
+<td class="py-space-sm px-space-sm text-right text-on-surface">2,910</td>
+<td class="py-space-sm px-space-sm text-right text-on-surface">100</td>
+<td class="py-space-sm px-space-sm text-right text-on-surface font-semibold">Rp 29,100,000</td>
+<td class="py-space-sm px-space-sm text-right text-outline">Rp 43,650</td>
+<td class="py-space-sm px-space-md text-center">
+<span class="px-space-xs py-0.5 bg-primary/10 text-primary text-label-sm font-label-sm">FILLED</span>
+</td>
+</tr>
+<!-- Row 6 -->
+<tr class="history-row hover:bg-surface-container-high/50 transition-colors bg-surface-container-lowest/30" data-side="BUY">
+<td class="py-space-sm px-space-md text-outline">2025-02-16 13:49:05</td>
+<td class="py-space-sm px-space-sm text-on-surface-variant font-semibold">#TS-89022</td>
+<td class="py-space-sm px-space-sm text-on-surface font-bold">ANTM</td>
+<td class="py-space-sm px-space-sm">
+<span class="px-space-xs py-0.5 bg-primary-container/20 text-primary font-bold text-label-sm font-label-sm">BELI</span>
+</td>
+<td class="py-space-sm px-space-sm text-right text-on-surface">1,535</td>
+<td class="py-space-sm px-space-sm text-right text-on-surface">150</td>
+<td class="py-space-sm px-space-sm text-right text-on-surface font-semibold">Rp 23,025,000</td>
+<td class="py-space-sm px-space-sm text-right text-outline">Rp 34,538</td>
+<td class="py-space-sm px-space-md text-center">
+<span class="px-space-xs py-0.5 bg-primary/10 text-primary text-label-sm font-label-sm">FILLED</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Table Pagination & Audit Telemetry Footer -->
+<div class="px-space-md py-space-sm bg-surface-container-lowest flex items-center justify-between text-outline font-data-sm text-data-sm">
+<div class="flex items-center gap-space-md">
+<span>Menampilkan 1-6 dari 142 transaksi terverifikasi</span>
+<span class="text-on-surface-variant">SHA256 Match Hash: 0x8a92...ef41</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="px-space-sm py-0.5 bg-surface-container-high text-outline hover:text-on-surface cursor-not-allowed uppercase font-label-sm text-label-sm" disabled="" type="button">Prev</button>
+<span class="px-space-sm py-0.5 bg-surface-container-highest text-primary font-bold">1</span>
+<button class="px-space-sm py-0.5 bg-surface-container-high text-on-surface hover:bg-surface-bright uppercase font-label-sm text-label-sm" type="button">2</button>
+<button class="px-space-sm py-0.5 bg-surface-container-high text-on-surface hover:bg-surface-bright uppercase font-label-sm text-label-sm" type="button">3</button>
+<button class="px-space-sm py-0.5 bg-surface-container-high text-on-surface hover:bg-surface-bright uppercase font-label-sm text-label-sm" type="button">Next</button>
+</div>
+</div>
+</section>
+<!-- Interactive Terminal Simulation Toast / Log Feedback Bar -->
+<div class="fixed bottom-4 right-4 bg-surface-container-highest text-on-surface px-space-md py-space-sm font-data-sm text-data-sm shadow-xl hidden z-50 flex items-center gap-space-sm" id="action-toast">
+<span class="material-symbols-outlined text-primary text-[18px]">check_circle</span>
+<span id="toast-message">Order Executed Successfully.</span>
+</div>
+</div>
+<script>
+  // Quick Order Action Trigger Mock
+  function quickAction(type, symbol) {
+    const toast = document.getElementById('action-toast');
+    const toastMsg = document.getElementById('toast-message');
+    if (!toast || !toastMsg) return;
+
+    if (type === 'BUY') {
+      toastMsg.innerText = `INSTANT EXECUTION: BUY +10 Lot ${symbol} @ MARKET ROUTED.`;
+      toastMsg.className = 'text-primary font-bold font-data-sm';
+    } else {
+      toastMsg.innerText = `INSTANT EXECUTION: SELL ALL ${symbol} @ LIQUIDITY DOCK.`;
+      toastMsg.className = 'text-secondary font-bold font-data-sm';
+    }
+
+    toast.classList.remove('hidden');
+    setTimeout(() => {
+      toast.classList.add('hidden');
+    }, 2800);
+  }
+
+  // Filter Buttons Handler (Semua, Buy, Sell)
+  const filterBtns = document.querySelectorAll('#side-filters .filter-btn');
+  const rows = document.querySelectorAll('#history-table-body .history-row');
+  const counter = document.getElementById('records-counter');
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterBtns.forEach(b => {
+        b.classList.remove('bg-surface-container-lowest', 'text-primary', 'font-bold');
+        b.classList.add('text-on-surface-variant');
+      });
+      btn.classList.add('bg-surface-container-lowest', 'text-primary', 'font-bold');
+      btn.classList.remove('text-on-surface-variant');
+
+      const filterVal = btn.getAttribute('data-filter');
+      let visibleCount = 0;
+
+      rows.forEach(row => {
+        const side = row.getAttribute('data-side');
+        if (filterVal === 'ALL' || side === filterVal) {
+          row.style.display = '';
+          visibleCount++;
+        } else {
+          row.style.display = 'none';
+        }
+      });
+
+      if (counter) {
+        counter.innerText = `FILTER: ${visibleCount} EKSEKUSI TERPILIH`;
+      }
+    });
+  });
+
+  // Export CSV mock trigger
+  const exportBtn = document.getElementById('btn-export-csv');
+  if (exportBtn) {
+    exportBtn.addEventListener('click', () => {
+      const toast = document.getElementById('action-toast');
+      const toastMsg = document.getElementById('toast-message');
+      if (toast && toastMsg) {
+        toastMsg.innerText = 'CSV EXPORT GENERATED: tradesim_portfolio_20250218.csv';
+        toastMsg.className = 'text-tertiary font-bold font-data-sm';
+        toast.classList.remove('hidden');
+        setTimeout(() => toast.classList.add('hidden'), 2500);
+      }
+    });
+  }
+
+  // Live seconds telemetry updater
+  const clockEl = document.getElementById('clock-telemetry');
+  if (clockEl) {
+    setInterval(() => {
+      const now = new Date();
+      const h = String(now.getHours()).padStart(2, '0');
+      const m = String(now.getMinutes()).padStart(2, '0');
+      const s = String(now.getSeconds()).padStart(2, '0');
+      clockEl.innerText = `${h}:${m}:${s} WIB`;
+    }, 1000);
+  }
+</script></main></div></body></html>

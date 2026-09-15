@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;1,400&amp;family=Sora:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;background-color:#10131a;color:#e0e2ec;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "on-tertiary-fixed-variant": "#653e00",
+          "surface-container-low": "#191c23",
+          "primary-fixed": "#6ffbbe",
+          "on-secondary-fixed": "#40000d",
+          "surface-container": "#1d2027",
+          "surface-container-lowest": "#0b0e15",
+          "secondary-fixed-dim": "#ffb2b7",
+          "secondary-container": "#b50036",
+          "on-primary-container": "#00422b",
+          "on-surface": "#e0e2ec",
+          "surface-dim": "#10131a",
+          "surface": "#10131a",
+          "secondary": "#ffb2b7",
+          "on-primary-fixed-variant": "#005236",
+          "surface-tint": "#4edea3",
+          "on-secondary-fixed-variant": "#92002a",
+          "on-tertiary-fixed": "#2a1700",
+          "tertiary-fixed-dim": "#ffb95f",
+          "surface-container-highest": "#32353c",
+          "on-primary": "#003824",
+          "inverse-surface": "#e0e2ec",
+          "surface-container-high": "#272a31",
+          "on-tertiary-container": "#523200",
+          "surface-bright": "#363941",
+          "error": "#ffb4ab",
+          "inverse-on-surface": "#2d3038",
+          "on-error": "#690005",
+          "primary-container": "#10b981",
+          "surface-variant": "#32353c",
+          "on-background": "#e0e2ec",
+          "outline-variant": "#3c4a42",
+          "on-secondary": "#67001b",
+          "secondary-fixed": "#ffdadb",
+          "primary-fixed-dim": "#4edea3",
+          "on-secondary-container": "#ffc2c4",
+          "primary": "#4edea3",
+          "on-tertiary": "#472a00",
+          "on-primary-fixed": "#002113",
+          "on-error-container": "#ffdad6",
+          "tertiary": "#ffb95f",
+          "background": "#10131a",
+          "outline": "#86948a",
+          "tertiary-fixed": "#ffddb8",
+          "error-container": "#93000a",
+          "inverse-primary": "#006c49",
+          "on-surface-variant": "#bbcabf",
+          "tertiary-container": "#e29100"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.25rem",
+          "lg": "0.5rem",
+          "xl": "0.75rem",
+          "full": "9999px"
+        },
+        "spacing": {
+          "gutter": "0.25rem",
+          "margin": "0.5rem",
+          "space-md": "0.5rem",
+          "space-lg": "0.75rem",
+          "space-sm": "0.25rem",
+          "space-xs": "0.125rem",
+          "space-xl": "1rem"
+        },
+        "fontFamily": {
+          "data-md": [
+            "JetBrains Mono"
+          ],
+          "data-lg": [
+            "JetBrains Mono"
+          ],
+          "body-sm": [
+            "Sora"
+          ],
+          "body-md": [
+            "Sora"
+          ],
+          "headline-md": [
+            "Sora"
+          ],
+          "label-sm": [
+            "JetBrains Mono"
+          ],
+          "data-sm": [
+            "JetBrains Mono"
+          ],
+          "label-md": [
+            "Sora"
+          ],
+          "headline-lg": [
+            "Sora"
+          ],
+          "headline-sm": [
+            "Sora"
+          ],
+          "body-lg": [
+            "Sora"
+          ]
+        },
+        "fontSize": {
+          "data-md": [
+            "12px",
+            {
+              "lineHeight": "16px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "500"
+            }
+          ],
+          "data-lg": [
+            "16px",
+            {
+              "lineHeight": "20px",
+              "letterSpacing": "-0.02em",
+              "fontWeight": "500"
+            }
+          ],
+          "body-sm": [
+            "11px",
+            {
+              "lineHeight": "14px",
+              "letterSpacing": "0.01em",
+              "fontWeight": "400"
+            }
+          ],
+          "body-md": [
+            "12px",
+            {
+              "lineHeight": "16px",
+              "letterSpacing": "0em",
+              "fontWeight": "400"
+            }
+          ],
+          "headline-md": [
+            "18px",
+            {
+              "lineHeight": "24px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "600"
+            }
+          ],
+          "label-sm": [
+            "9px",
+            {
+              "lineHeight": "12px",
+              "letterSpacing": "0.06em",
+              "fontWeight": "600"
+            }
+          ],
+          "data-sm": [
+            "10px",
+            {
+              "lineHeight": "13px",
+              "letterSpacing": "0em",
+              "fontWeight": "400"
+            }
+          ],
+          "label-md": [
+            "11px",
+            {
+              "lineHeight": "14px",
+              "letterSpacing": "0.04em",
+              "fontWeight": "600"
+            }
+          ],
+          "headline-lg": [
+            "24px",
+            {
+              "lineHeight": "32px",
+              "letterSpacing": "-0.02em",
+              "fontWeight": "600"
+            }
+          ],
+          "headline-sm": [
+            "14px",
+            {
+              "lineHeight": "20px",
+              "letterSpacing": "0em",
+              "fontWeight": "600"
+            }
+          ],
+          "body-lg": [
+            "14px",
+            {
+              "lineHeight": "20px",
+              "letterSpacing": "0em",
+              "fontWeight": "400"
+            }
+          ]
+        }
+      },
+    },
+  }</script></head><body class="bg-surface font-body-md text-body-md text-on-surface select-none"><aside class="fixed left-0 top-0 h-full w-64 bg-surface-container-lowest border-r border-outline-variant/40 z-50 flex flex-col justify-between"><div class="flex flex-col"><div class="h-14 px-space-lg flex items-center justify-between border-b border-outline-variant/30 bg-surface-container-low"><div class="flex items-center gap-space-sm"><div class="w-2 h-5 bg-primary rounded-none"></div><span class="font-headline-sm text-headline-sm font-bold tracking-tight text-on-surface">TRADESIM</span><span class="font-label-sm text-label-sm px-space-xs py-0.5 bg-surface-container-highest text-on-surface-variant rounded-none border border-outline-variant/50">v1.2</span></div><div class="flex items-center gap-space-xs"><span class="w-2 h-2 rounded-none bg-primary animate-pulse"></span><span class="font-label-sm text-label-sm text-primary tracking-widest">LIVE</span></div></div><div class="px-space-md py-space-sm bg-surface-dim border-b border-outline-variant/20 flex items-center justify-between"><span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">WORKSPACE CORE</span><span class="font-data-sm text-data-sm text-on-surface-variant">RT-09</span></div><nav class="flex flex-col p-space-sm gap-space-xs" data-active-classes="bg-surface-container text-primary font-bold border-l-2 border-primary"><a aria-current="page" class="flex items-center gap-space-md px-space-md py-space-sm transition-colors bg-surface-container text-primary font-bold border-l-2 border-primary" data-path="trading-terminal" href="#"><span class="material-symbols-outlined text-[18px]">candlestick_chart</span><span class="font-body-md text-body-md uppercase tracking-wide">Trading Terminal</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="order-book-depth" href="#"><span class="material-symbols-outlined text-[18px]">format_align_center</span><span class="font-body-md text-body-md uppercase tracking-wide">Order Book &amp; Depth</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="portfolio-history" href="#"><span class="material-symbols-outlined text-[18px]">receipt_long</span><span class="font-body-md text-body-md uppercase tracking-wide">Portfolio &amp; History</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="engine-analytics" href="#"><span class="material-symbols-outlined text-[18px]">monitoring</span><span class="font-body-md text-body-md uppercase tracking-wide">Engine Analytics</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="api-docs" href="#"><span class="material-symbols-outlined text-[18px]">terminal</span><span class="font-body-md text-body-md uppercase tracking-wide">API &amp; Docs</span></a></nav></div><div class="flex flex-col border-t border-outline-variant/40 bg-surface-container-lowest p-space-md gap-space-sm"><div class="flex items-center justify-between pb-space-xs border-b border-outline-variant/20"><span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">SIMULATOR STATUS</span><span class="font-label-sm text-label-sm text-tertiary uppercase">STANDALONE</span></div><div class="flex flex-col gap-space-xs font-data-sm text-data-sm"><div class="flex justify-between items-center"><span class="text-on-surface-variant">Engine Latency:</span><span class="text-primary font-data-md text-data-md">12ms</span></div><div class="flex justify-between items-center"><span class="text-on-surface-variant">Matching Engine:</span><span class="text-on-surface">L3 Deterministic</span></div><div class="flex justify-between items-center"><span class="text-on-surface-variant">Memory State:</span><span class="text-on-surface">Heap 284MB</span></div></div><div class="grid grid-cols-2 gap-space-sm pt-space-xs"><button class="px-space-sm py-space-xs bg-surface-container-high hover:bg-surface-bright text-error font-body-sm text-body-sm border border-secondary-container/40 uppercase tracking-wider text-center" type="button">Reset State</button><button class="px-space-sm py-space-xs bg-surface-container-high hover:bg-surface-bright text-primary font-body-sm text-body-sm border border-outline-variant/40 uppercase tracking-wider text-center" type="button">Quick L2</button></div></div></aside><div class="pl-64 flex flex-col min-h-screen"><header class="fixed top-0 left-64 right-0 h-14 bg-surface-container-lowest/95 backdrop-blur-md border-b border-outline-variant/40 z-40 flex items-center justify-between px-space-lg"><div class="flex items-center gap-space-lg overflow-x-hidden whitespace-nowrap"><div class="flex items-center gap-space-sm pr-space-lg border-r border-outline-variant/30"><span class="font-label-sm text-label-sm text-outline uppercase">IDX TICKER</span><span class="w-1.5 h-1.5 bg-primary rounded-none animate-ping"></span></div><div class="flex items-center gap-space-xl font-data-sm text-data-sm"><div class="flex items-baseline gap-space-xs"><span class="text-on-surface font-semibold">IHSG</span><span class="text-on-surface">7,294.10</span><span class="text-primary">+0.42%</span></div><div class="flex items-baseline gap-space-xs"><span class="text-on-surface font-semibold">BBCA</span><span class="text-on-surface">10,150</span><span class="text-primary">+1.25%</span></div><div class="flex items-baseline gap-space-xs"><span class="text-on-surface font-semibold">TLKM</span><span class="text-on-surface">2,890</span><span class="text-secondary">-0.68%</span></div><div class="flex items-baseline gap-space-xs"><span class="text-on-surface font-semibold">GOTO</span><span class="text-on-surface">54</span><span class="text-primary">+3.85%</span></div></div></div><div class="flex items-center gap-space-lg flex-shrink-0"><div class="flex items-center gap-space-lg px-space-md py-space-xs bg-surface-container-low border border-outline-variant/30 font-data-sm text-data-sm"><div class="flex flex-col"><span class="font-label-sm text-label-sm text-outline uppercase">Buying Power</span><span class="text-on-surface font-semibold">Rp 100,000,000</span></div><div class="w-px h-6 bg-outline-variant/30"></div><div class="flex flex-col"><span class="font-label-sm text-label-sm text-outline uppercase">Portfolio Val</span><span class="text-on-surface font-semibold">Rp 142,500,000</span></div><div class="w-px h-6 bg-outline-variant/30"></div><div class="flex flex-col"><span class="font-label-sm text-label-sm text-outline uppercase">Unrealized PNL</span><span class="text-primary font-semibold">+Rp 4,250,000 (+3.07%)</span></div></div><div class="flex items-center gap-space-xs border-l border-outline-variant/30 pl-space-md"><button class="w-8 h-8 flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" type="button"><span class="material-symbols-outlined text-[18px]">grid_view</span></button><button class="w-8 h-8 flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors relative" type="button"><span class="material-symbols-outlined text-[18px]">notifications</span><span class="absolute top-1 right-1 w-1.5 h-1.5 bg-tertiary rounded-none"></span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-14 px-space-md pb-space-lg bg-surface flex-1 min-h-[calc(100vh-3.5rem)]"><div class="flex flex-col w-full gap-space-xs">
+<div class="bg-surface-container-lowest p-space-sm flex flex-wrap items-center justify-between gap-space-md shadow-sm">
+<div class="flex items-center gap-space-md flex-wrap">
+<div class="flex items-center gap-space-sm">
+<div class="relative inline-block text-left" id="tickerDropdownWrapper">
+<button class="flex items-center gap-space-xs bg-surface-container px-space-md py-space-xs text-on-surface hover:bg-surface-container-high transition-colors" id="tickerDropdownBtn" type="button">
+<span class="font-headline-sm text-headline-sm font-bold tracking-tight text-primary">BBCA</span>
+<span class="font-label-sm text-label-sm px-space-xs py-0.5 bg-surface-bright text-on-surface font-semibold">IDX:EQUITY</span>
+<span class="material-symbols-outlined text-[16px] text-outline">expand_more</span>
+</button>
+<div class="hidden absolute left-0 mt-1 w-56 bg-surface-container-highest shadow-xl z-50 py-1" id="tickerMenu">
+<div class="px-space-md py-1 text-outline font-label-sm text-label-sm uppercase">Quick Select Ticker</div>
+<button class="w-full text-left px-space-md py-space-xs hover:bg-surface flex justify-between font-data-sm text-data-sm text-on-surface" onclick="selectTicker('BBCA', '10,150', '+1.25%')" type="button">
+<span>BBCA - BCA</span><span class="text-primary font-semibold">10,150</span>
+</button>
+<button class="w-full text-left px-space-md py-space-xs hover:bg-surface flex justify-between font-data-sm text-data-sm text-on-surface" onclick="selectTicker('TLKM', '2,890', '-0.68%')" type="button">
+<span>TLKM - Telkom</span><span class="text-secondary font-semibold">2,890</span>
+</button>
+<button class="w-full text-left px-space-md py-space-xs hover:bg-surface flex justify-between font-data-sm text-data-sm text-on-surface" onclick="selectTicker('GOTO', '54', '+3.85%')" type="button">
+<span>GOTO - GoTo Gojek</span><span class="text-primary font-semibold">54</span>
+</button>
+<button class="w-full text-left px-space-md py-space-xs hover:bg-surface flex justify-between font-data-sm text-data-sm text-on-surface" onclick="selectTicker('BMRI', '7,175', '+0.70%')" type="button">
+<span>BMRI - Bank Mandiri</span><span class="text-primary font-semibold">7,175</span>
+</button>
+<button class="w-full text-left px-space-md py-space-xs hover:bg-surface flex justify-between font-data-sm text-data-sm text-on-surface" onclick="selectTicker('ANTM', '1,610', '-1.22%')" type="button">
+<span>ANTM - Aneka Tambang</span><span class="text-secondary font-semibold">1,610</span>
+</button>
+<button class="w-full text-left px-space-md py-space-xs hover:bg-surface flex justify-between font-data-sm text-data-sm text-on-surface" onclick="selectTicker('ASII', '5,100', '+0.49%')" type="button">
+<span>ASII - Astra Intl</span><span class="text-primary font-semibold">5,100</span>
+</button>
+<button class="w-full text-left px-space-md py-space-xs hover:bg-surface flex justify-between font-data-sm text-data-sm text-on-surface" onclick="selectTicker('ICBP', '11,400', '0.00%')" type="button">
+<span>ICBP - Indofood CBP</span><span class="text-on-surface-variant font-semibold">11,400</span>
+</button>
+</div>
+</div>
+<div class="flex flex-col">
+<span class="font-body-md text-body-md font-semibold text-on-surface leading-tight" id="tickerFullTitle">PT Bank Central Asia Tbk</span>
+<span class="font-label-sm text-label-sm text-outline">Papan Utama • Financials • LQ45</span>
+</div>
+</div>
+<div class="h-6 w-px bg-surface-bright hidden md:block"></div>
+<div class="flex items-baseline gap-space-sm">
+<span class="font-headline-lg text-headline-lg font-bold text-primary font-data-lg" id="lastPrice">Rp 10,150</span>
+<span class="font-data-md text-data-md px-1.5 py-0.5 bg-primary/10 text-primary font-semibold" id="pctChange">+1.25%</span>
+<span class="font-data-sm text-data-sm text-primary">(+125)</span>
+</div>
+<div class="h-6 w-px bg-surface-bright hidden lg:block"></div>
+<div class="flex items-center gap-space-lg font-data-sm text-data-sm">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline uppercase">Buka</span>
+<span class="text-on-surface font-medium">10,025</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline uppercase">Tertinggi</span>
+<span class="text-primary font-medium">10,200</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline uppercase">Terendah</span>
+<span class="text-secondary font-medium">10,000</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline uppercase">Volume</span>
+<span class="text-on-surface font-medium">428,500 <span class="text-outline text-[9px]">Lot</span></span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline uppercase">Nilai Turn</span>
+<span class="text-on-surface font-medium">Rp 434.9B</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-space-md">
+<div class="flex items-center gap-space-xs bg-surface-container px-space-sm py-1">
+<span class="w-2 h-2 bg-primary animate-pulse"></span>
+<span class="font-label-sm text-label-sm text-primary uppercase">Sesi 2 Aktif</span>
+</div>
+<div class="flex items-center gap-space-xs bg-surface-container px-space-sm py-1">
+<span class="font-label-sm text-label-sm text-outline uppercase">Engine:</span>
+<span class="font-data-sm text-data-sm text-tertiary">L3 Tick</span>
+<span class="font-data-sm text-data-sm text-primary">8ms</span>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-space-xs">
+<div class="xl:col-span-8 flex flex-col gap-space-xs">
+<div class="bg-surface-container-lowest p-space-sm flex flex-col gap-space-sm shadow-sm">
+<div class="flex flex-wrap items-center justify-between gap-space-sm bg-surface-container-low p-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm text-outline px-space-xs">TIMEFRAME:</span>
+<button class="px-space-sm py-0.5 bg-surface-container-highest text-on-surface font-data-sm text-data-sm hover:bg-surface-bright" type="button">1m</button>
+<button class="px-space-sm py-0.5 bg-primary text-on-primary font-bold font-data-sm text-data-sm" type="button">5m</button>
+<button class="px-space-sm py-0.5 bg-surface-container-highest text-on-surface font-data-sm text-data-sm hover:bg-surface-bright" type="button">15m</button>
+<button class="px-space-sm py-0.5 bg-surface-container-highest text-on-surface font-data-sm text-data-sm hover:bg-surface-bright" type="button">1H</button>
+<button class="px-space-sm py-0.5 bg-surface-container-highest text-on-surface font-data-sm text-data-sm hover:bg-surface-bright" type="button">1D</button>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm text-outline px-space-xs">OVERLAYS:</span>
+<span class="px-space-sm py-0.5 bg-surface-container text-primary font-data-sm text-data-sm font-semibold flex items-center gap-1">
+<span class="w-1.5 h-1.5 bg-primary"></span>SMA 20: 10,115
+            </span>
+<span class="px-space-sm py-0.5 bg-surface-container text-tertiary font-data-sm text-data-sm font-semibold flex items-center gap-1">
+<span class="w-1.5 h-1.5 bg-tertiary"></span>EMA 50: 10,080
+            </span>
+<span class="px-space-sm py-0.5 bg-surface-container text-outline font-data-sm text-data-sm font-semibold flex items-center gap-1">
+<span class="w-1.5 h-1.5 bg-outline"></span>VWAP: 10,142
+            </span>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="px-space-xs py-0.5 text-on-surface-variant hover:text-on-surface" type="button"><span class="material-symbols-outlined text-[16px]">draw</span></button>
+<button class="px-space-xs py-0.5 text-on-surface-variant hover:text-on-surface" type="button"><span class="material-symbols-outlined text-[16px]">fullscreen</span></button>
+</div>
+</div>
+<div class="w-full h-80 bg-surface-container-lowest relative overflow-hidden flex flex-col justify-between p-2">
+<div class="absolute inset-0 flex flex-col justify-between pointer-events-none opacity-20">
+<div class="w-full h-px bg-outline"></div>
+<div class="w-full h-px bg-outline"></div>
+<div class="w-full h-px bg-outline"></div>
+<div class="w-full h-px bg-outline"></div>
+<div class="w-full h-px bg-outline"></div>
+</div>
+<div class="relative z-10 flex justify-between items-start font-data-sm text-data-sm">
+<div class="flex gap-space-md text-outline">
+<span>O: <strong class="text-on-surface">10,125</strong></span>
+<span>H: <strong class="text-primary">10,175</strong></span>
+<span>L: <strong class="text-secondary">10,100</strong></span>
+<span>C: <strong class="text-primary">10,150</strong></span>
+</div>
+<span class="text-outline font-label-sm text-label-sm">PRICE LEVEL / IDR</span>
+</div>
+<div class="relative z-10 h-56 w-full flex items-end">
+<svg class="w-full h-full" preserveaspectratio="none" viewbox="0 0 760 210">
+<path d="M 0 135 L 70 128 L 140 130 L 210 115 L 280 120 L 350 95 L 420 85 L 490 92 L 560 70 L 630 62 L 700 48 L 760 40" fill="none" stroke="#4edea3" stroke-opacity="0.8" stroke-width="1.5"></path>
+<path d="M 0 155 L 70 150 L 140 148 L 210 140 L 280 135 L 350 125 L 420 120 L 490 118 L 560 108 L 630 98 L 700 90 L 760 82" fill="none" stroke="#ffb95f" stroke-dasharray="3,3" stroke-opacity="0.8" stroke-width="1.5"></path>
+<path d="M 0 140 L 70 138 L 140 136 L 210 130 L 280 128 L 350 115 L 420 110 L 490 108 L 560 98 L 630 90 L 700 80 L 760 72" fill="none" stroke="#86948a" stroke-opacity="0.6" stroke-width="1"></path>
+<line stroke="#4edea3" stroke-width="1.2" x1="40" x2="40" y1="130" y2="185"></line>
+<rect fill="#10b981" height="35" width="14" x="33" y="140"></rect>
+<line stroke="#ffb2b7" stroke-width="1.2" x1="100" x2="100" y1="120" y2="175"></line>
+<rect fill="#b50036" height="30" width="14" x="93" y="130"></rect>
+<line stroke="#4edea3" stroke-width="1.2" x1="160" x2="160" y1="110" y2="160"></line>
+<rect fill="#10b981" height="28" width="14" x="153" y="125"></rect>
+<line stroke="#ffb2b7" stroke-width="1.2" x1="220" x2="220" y1="95" y2="150"></line>
+<rect fill="#b50036" height="32" width="14" x="213" y="105"></rect>
+<line stroke="#4edea3" stroke-width="1.2" x1="280" x2="280" y1="80" y2="140"></line>
+<rect fill="#10b981" height="36" width="14" x="273" y="92"></rect>
+<line stroke="#4edea3" stroke-width="1.2" x1="340" x2="340" y1="75" y2="130"></line>
+<rect fill="#10b981" height="35" width="14" x="333" y="85"></rect>
+<line stroke="#ffb2b7" stroke-width="1.2" x1="400" x2="400" y1="65" y2="120"></line>
+<rect fill="#b50036" height="25" width="14" x="393" y="80"></rect>
+<line stroke="#4edea3" stroke-width="1.2" x1="460" x2="460" y1="70" y2="125"></line>
+<rect fill="#10b981" height="30" width="14" x="453" y="82"></rect>
+<line stroke="#4edea3" stroke-width="1.2" x1="520" x2="520" y1="50" y2="110"></line>
+<rect fill="#10b981" height="38" width="14" x="513" y="60"></rect>
+<line stroke="#ffb2b7" stroke-width="1.2" x1="580" x2="580" y1="45" y2="95"></line>
+<rect fill="#b50036" height="26" width="14" x="573" y="55"></rect>
+<line stroke="#4edea3" stroke-width="1.2" x1="640" x2="640" y1="30" y2="85"></line>
+<rect fill="#10b981" height="34" width="14" x="633" y="38"></rect>
+<line stroke="#4edea3" stroke-width="1.2" x1="700" x2="700" y1="20" y2="75"></line>
+<rect fill="#10b981" height="32" width="14" x="693" y="28"></rect>
+<line opacity="0.6" stroke="#4edea3" stroke-dasharray="2,4" stroke-width="1" x1="0" x2="760" y1="38" y2="38"></line>
+<text fill="#4edea3" font-family="JetBrains Mono" font-size="10" font-weight="bold" x="705" y="34">10,150</text>
+</svg>
+</div>
+<div class="relative z-10 h-14 w-full flex items-end pt-1 bg-surface-container-low/30">
+<svg class="w-full h-full" preserveaspectratio="none" viewbox="0 0 760 50">
+<rect fill="#10b981" height="30" opacity="0.5" width="14" x="33" y="20"></rect>
+<rect fill="#b50036" height="22" opacity="0.5" width="14" x="93" y="28"></rect>
+<rect fill="#10b981" height="34" opacity="0.5" width="14" x="153" y="16"></rect>
+<rect fill="#b50036" height="26" opacity="0.5" width="14" x="213" y="24"></rect>
+<rect fill="#10b981" height="38" opacity="0.6" width="14" x="273" y="12"></rect>
+<rect fill="#10b981" height="40" opacity="0.7" width="14" x="333" y="10"></rect>
+<rect fill="#b50036" height="20" opacity="0.5" width="14" x="393" y="30"></rect>
+<rect fill="#10b981" height="28" opacity="0.6" width="14" x="453" y="22"></rect>
+<rect fill="#10b981" height="42" opacity="0.8" width="14" x="513" y="8"></rect>
+<rect fill="#b50036" height="24" opacity="0.5" width="14" x="573" y="26"></rect>
+<rect fill="#10b981" height="36" opacity="0.7" width="14" x="633" y="14"></rect>
+<rect fill="#10b981" height="45" opacity="0.9" width="14" x="693" y="5"></rect>
+</svg>
+</div>
+<div class="flex justify-between font-data-sm text-data-sm text-outline pt-1">
+<span>13:30</span>
+<span>13:45</span>
+<span>14:00</span>
+<span>14:15</span>
+<span>14:30</span>
+<span>14:45</span>
+<span>15:00 (NOW)</span>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-sm shadow-sm flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="w-2 h-3 bg-tertiary"></span>
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">AI Market Intelligence</span>
+<span class="font-label-sm text-label-sm px-space-xs py-0.5 bg-primary/10 text-primary font-semibold">GEMINI 2.5 FLASH LITE</span>
+<span class="font-label-sm text-label-sm px-space-xs py-0.5 bg-tertiary/10 text-tertiary font-semibold">BULLISH 78%</span>
+</div>
+<button class="px-space-md py-1 bg-surface-container-high hover:bg-surface-bright text-tertiary font-body-sm text-body-sm font-bold flex items-center gap-space-xs transition-colors" id="btnAiAnalyze" type="button">
+<span class="material-symbols-outlined text-[15px]">auto_awesome</span>
+<span>Analisa dengan AI</span>
+</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-sm pt-1">
+<div class="bg-surface-container-low p-space-sm flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline uppercase">Order Flow Sentiment</span>
+<span class="font-data-sm text-data-sm text-primary font-bold">Akumulasi Institusi</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface leading-snug">
+              Terdeteksi 4 blok transaksi net-buy via broker asing (ZP, CC) di atas area 10,125. Dominasi demand terkonfirmasi di level 10,100.
+            </p>
+</div>
+<div class="bg-surface-container-low p-space-sm flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline uppercase">Support &amp; Resistance</span>
+<span class="font-data-sm text-data-sm text-tertiary font-bold">Pivot Break</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface leading-snug">
+              Resistensi terdekat di 10,200 sedang dites dengan 82k lot antrian ask. Jika tembus, potensi akselerasi likuiditas menuju 10,325.
+            </p>
+</div>
+<div class="bg-surface-container-low p-space-sm flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline uppercase">Strategi Rekomendasi</span>
+<span class="font-data-sm text-data-sm text-primary font-bold">Buy On Weakness</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface leading-snug">
+              Optimal entry limit range 10,100 - 10,125. Stop level protektif ketat pada 9,975. Target profit parsial R1 10,250.
+            </p>
+</div>
+</div>
+</div>
+</div>
+<div class="xl:col-span-4 flex flex-col gap-space-xs">
+<div class="bg-surface-container-lowest p-space-sm shadow-sm flex flex-col gap-space-xs">
+<div class="flex items-center justify-between pb-1">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm text-outline uppercase font-semibold">LEVEL-2 ORDER BOOK</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-data-sm">TICK: 25</span>
+</div>
+<div class="flex items-center gap-space-sm font-data-sm text-data-sm">
+<span class="text-outline">Spread: <strong class="text-on-surface">25 (0.25%)</strong></span>
+<span class="text-outline">Mid: <strong class="text-tertiary">10,137.5</strong></span>
+</div>
+</div>
+<div class="w-full bg-surface-container-low h-2 flex overflow-hidden">
+<div class="h-full bg-primary" style="width: 56%;" title="Bids: 56%"></div>
+<div class="h-full bg-secondary-container" style="width: 44%;" title="Asks: 44%"></div>
+</div>
+<div class="flex justify-between font-label-sm text-label-sm font-data-sm text-outline">
+<span class="text-primary font-bold">BID 56% (261,400 Lot)</span>
+<span class="text-secondary font-bold">ASK 44% (205,100 Lot)</span>
+</div>
+<div class="grid grid-cols-2 gap-x-1 font-data-sm text-data-sm pt-1">
+<div class="flex flex-col">
+<div class="flex justify-between text-outline font-label-sm text-label-sm py-1 bg-surface-container-high px-1">
+<span>QUE</span>
+<span>VOL</span>
+<span>BID</span>
+</div>
+<div class="flex flex-col gap-0.5">
+<div class="relative flex justify-between items-center px-1 py-0.5 bg-surface-container-low hover:bg-surface-bright">
+<div class="absolute inset-y-0 right-0 bg-primary/20 pointer-events-none" style="width: 85%;"></div>
+<span class="text-on-surface-variant z-10">421</span>
+<span class="text-on-surface z-10 font-semibold">68,450</span>
+<span class="text-primary z-10 font-bold">10,125</span>
+</div>
+<div class="relative flex justify-between items-center px-1 py-0.5 bg-surface-container-low hover:bg-surface-bright">
+<div class="absolute inset-y-0 right-0 bg-primary/20 pointer-events-none" style="width: 72%;"></div>
+<span class="text-on-surface-variant z-10">388</span>
+<span class="text-on-surface z-10 font-semibold">58,120</span>
+<span class="text-primary z-10 font-bold">10,100</span>
+</div>
+<div class="relative flex justify-between items-center px-1 py-0.5 bg-surface-container-low hover:bg-surface-bright">
+<div class="absolute inset-y-0 right-0 bg-primary/20 pointer-events-none" style="width: 61%;"></div>
+<span class="text-on-surface-variant z-10">294</span>
+<span class="text-on-surface z-10 font-semibold">49,200</span>
+<span class="text-primary z-10 font-bold">10,075</span>
+</div>
+<div class="relative flex justify-between items-center px-1 py-0.5 bg-surface-container-low hover:bg-surface-bright">
+<div class="absolute inset-y-0 right-0 bg-primary/20 pointer-events-none" style="width: 54%;"></div>
+<span class="text-on-surface-variant z-10">210</span>
+<span class="text-on-surface z-10 font-semibold">43,600</span>
+<span class="text-primary z-10 font-bold">10,050</span>
+</div>
+<div class="relative flex justify-between items-center px-1 py-0.5 bg-surface-container-low hover:bg-surface-bright">
+<div class="absolute inset-y-0 right-0 bg-primary/20 pointer-events-none" style="width: 48%;"></div>
+<span class="text-on-surface-variant z-10">175</span>
+<span class="text-on-surface z-10 font-semibold">42,030</span>
+<span class="text-primary z-10 font-bold">10,025</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col">
+<div class="flex justify-between text-outline font-label-sm text-label-sm py-1 bg-surface-container-high px-1">
+<span>ASK</span>
+<span>VOL</span>
+<span>QUE</span>
+</div>
+<div class="flex flex-col gap-0.5">
+<div class="relative flex justify-between items-center px-1 py-0.5 bg-surface-container-low hover:bg-surface-bright">
+<div class="absolute inset-y-0 left-0 bg-secondary-container/25 pointer-events-none" style="width: 42%;"></div>
+<span class="text-secondary z-10 font-bold">10,150</span>
+<span class="text-on-surface z-10 font-semibold">34,120</span>
+<span class="text-on-surface-variant z-10">190</span>
+</div>
+<div class="relative flex justify-between items-center px-1 py-0.5 bg-surface-container-low hover:bg-surface-bright">
+<div class="absolute inset-y-0 left-0 bg-secondary-container/25 pointer-events-none" style="width: 58%;"></div>
+<span class="text-secondary z-10 font-bold">10,175</span>
+<span class="text-on-surface z-10 font-semibold">47,010</span>
+<span class="text-on-surface-variant z-10">260</span>
+</div>
+<div class="relative flex justify-between items-center px-1 py-0.5 bg-surface-container-low hover:bg-surface-bright">
+<div class="absolute inset-y-0 left-0 bg-secondary-container/25 pointer-events-none" style="width: 95%;"></div>
+<span class="text-secondary z-10 font-bold">10,200</span>
+<span class="text-on-surface z-10 font-semibold">82,400</span>
+<span class="text-on-surface-variant z-10">512</span>
+</div>
+<div class="relative flex justify-between items-center px-1 py-0.5 bg-surface-container-low hover:bg-surface-bright">
+<div class="absolute inset-y-0 left-0 bg-secondary-container/25 pointer-events-none" style="width: 32%;"></div>
+<span class="text-secondary z-10 font-bold">10,225</span>
+<span class="text-on-surface z-10 font-semibold">25,870</span>
+<span class="text-on-surface-variant z-10">144</span>
+</div>
+<div class="relative flex justify-between items-center px-1 py-0.5 bg-surface-container-low hover:bg-surface-bright">
+<div class="absolute inset-y-0 left-0 bg-secondary-container/25 pointer-events-none" style="width: 21%;"></div>
+<span class="text-secondary z-10 font-bold">10,250</span>
+<span class="text-on-surface z-10 font-semibold">15,700</span>
+<span class="text-on-surface-variant z-10">98</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-sm shadow-sm flex flex-col gap-space-xs">
+<div class="flex items-center justify-between pb-1">
+<span class="font-label-sm text-label-sm text-outline uppercase font-semibold">ORDER EXECUTION</span>
+<span class="font-label-sm text-label-sm text-tertiary">POWER: Rp 100.0M</span>
+</div>
+<div class="grid grid-cols-2 gap-space-xs">
+<button class="py-1 bg-primary text-on-primary font-headline-sm text-headline-sm font-bold tracking-wide uppercase transition-colors" id="tabBuy" onclick="switchOrderTab('BUY')" type="button">
+            BELI (BUY)
+          </button>
+<button class="py-1 bg-surface-container-high text-on-surface-variant hover:text-on-surface font-headline-sm text-headline-sm font-bold tracking-wide uppercase transition-colors" id="tabSell" onclick="switchOrderTab('SELL')" type="button">
+            JUAL (SELL)
+          </button>
+</div>
+<div class="flex items-center gap-space-xs pt-1">
+<button class="flex-1 py-0.5 bg-surface-container text-primary font-data-sm text-data-sm font-semibold" id="typeLimit" onclick="switchOrderType('LIMIT')" type="button">LIMIT</button>
+<button class="flex-1 py-0.5 bg-surface-container-low text-outline hover:text-on-surface font-data-sm text-data-sm font-semibold" id="typeMarket" onclick="switchOrderType('MARKET')" type="button">MARKET</button>
+</div>
+<div class="flex flex-col gap-space-xs pt-1">
+<div class="flex items-center justify-between bg-surface-container-low px-space-sm py-1">
+<span class="font-label-sm text-label-sm text-outline uppercase">Harga (IDR)</span>
+<div class="flex items-center gap-space-xs">
+<button class="w-6 h-6 bg-surface-container-highest hover:bg-surface-bright text-on-surface font-bold text-center" onclick="adjustPrice(-25)" type="button">-</button>
+<input class="w-24 bg-surface-container-lowest text-right font-data-md text-data-md font-bold px-1.5 py-0.5 text-on-surface focus:outline-none focus:bg-surface" id="orderPrice" oninput="calcTotal()" type="text" value="10150"/>
+<button class="w-6 h-6 bg-surface-container-highest hover:bg-surface-bright text-on-surface font-bold text-center" onclick="adjustPrice(25)" type="button">+</button>
+</div>
+</div>
+<div class="flex items-center justify-between bg-surface-container-low px-space-sm py-1">
+<span class="font-label-sm text-label-sm text-outline uppercase">Kuantitas (Lot)</span>
+<div class="flex items-center gap-space-xs">
+<button class="w-6 h-6 bg-surface-container-highest hover:bg-surface-bright text-on-surface font-bold text-center" onclick="adjustLot(-1)" type="button">-</button>
+<input class="w-24 bg-surface-container-lowest text-right font-data-md text-data-md font-bold px-1.5 py-0.5 text-on-surface focus:outline-none focus:bg-surface" id="orderLot" oninput="calcTotal()" type="text" value="25"/>
+<button class="w-6 h-6 bg-surface-container-highest hover:bg-surface-bright text-on-surface font-bold text-center" onclick="adjustLot(1)" type="button">+</button>
+</div>
+</div>
+<div class="grid grid-cols-5 gap-1">
+<button class="py-0.5 bg-surface-container-high hover:bg-surface-bright text-outline hover:text-on-surface font-data-sm text-data-sm" onclick="setLotPct(25)" type="button">25%</button>
+<button class="py-0.5 bg-surface-container-high hover:bg-surface-bright text-outline hover:text-on-surface font-data-sm text-data-sm" onclick="setLotPct(50)" type="button">50%</button>
+<button class="py-0.5 bg-surface-container-high hover:bg-surface-bright text-outline hover:text-on-surface font-data-sm text-data-sm" onclick="setLotPct(75)" type="button">75%</button>
+<button class="py-0.5 bg-surface-container-high hover:bg-surface-bright text-outline hover:text-on-surface font-data-sm text-data-sm" onclick="setLotPct(100)" type="button">100%</button>
+<button class="py-0.5 bg-surface-container-highest hover:bg-surface-bright text-tertiary font-bold font-data-sm text-data-sm" onclick="setLotPct('MAX')" type="button">MAX</button>
+</div>
+<div class="flex flex-col gap-0.5 bg-surface-container-low p-space-xs font-data-sm text-data-sm mt-1">
+<div class="flex justify-between text-outline">
+<span>Nilai Saham:</span>
+<span class="text-on-surface font-medium" id="orderNominal">Rp 25,375,000</span>
+</div>
+<div class="flex justify-between text-outline">
+<span>Fee Broker (0.15%):</span>
+<span class="text-on-surface font-medium" id="orderFee">Rp 38,063</span>
+</div>
+<div class="flex justify-between text-on-surface font-bold pt-1">
+<span>Total Estimasi:</span>
+<span class="text-primary font-data-md text-data-md" id="orderTotal">Rp 25,413,063</span>
+</div>
+</div>
+<button class="mt-1 w-full py-2 bg-primary hover:bg-primary-container text-on-primary font-headline-sm text-headline-sm font-bold tracking-wider uppercase transition-colors shadow-md" id="btnSubmitOrder" onclick="executeOrder()" type="button">
+            Kirim Order Beli BBCA
+          </button>
+</div>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-space-xs">
+<div class="xl:col-span-8 bg-surface-container-lowest p-space-sm shadow-sm flex flex-col gap-space-xs">
+<div class="flex items-center justify-between pb-1">
+<div class="flex items-center gap-space-md">
+<button class="font-label-md text-label-md text-primary font-bold tracking-wider uppercase flex items-center gap-space-xs" type="button">
+<span class="w-1.5 h-1.5 bg-primary"></span>
+<span>MY ORDERS (RESTING: 3)</span>
+</button>
+<button class="font-label-md text-label-md text-outline hover:text-on-surface font-semibold tracking-wider uppercase" type="button">
+            TRADE LOGS
+          </button>
+<button class="font-label-md text-label-md text-outline hover:text-on-surface font-semibold tracking-wider uppercase" type="button">
+            PORTFOLIO SUMMARY
+          </button>
+</div>
+<button class="text-secondary font-label-sm text-label-sm uppercase hover:underline" type="button">BATALKAN SEMUA</button>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left font-data-sm text-data-sm">
+<thead>
+<tr class="text-outline font-label-sm text-label-sm bg-surface-container-high uppercase">
+<th class="py-1 px-space-sm">WAKTU</th>
+<th class="py-1 px-space-sm">EMITEN</th>
+<th class="py-1 px-space-sm">SIDE</th>
+<th class="py-1 px-space-sm text-right">HARGA</th>
+<th class="py-1 px-space-sm text-right">LOT ORDER</th>
+<th class="py-1 px-space-sm text-right">TERISI</th>
+<th class="py-1 px-space-sm">STATUS</th>
+<th class="py-1 px-space-sm text-center">AKSI</th>
+</tr>
+</thead>
+<tbody class="divide-y-0" id="orderBlotterTable">
+<tr class="bg-surface-container-low hover:bg-surface-bright transition-colors">
+<td class="py-1 px-space-sm text-on-surface-variant">14:28:12</td>
+<td class="py-1 px-space-sm font-bold text-on-surface">BBCA</td>
+<td class="py-1 px-space-sm text-primary font-semibold">BELI</td>
+<td class="py-1 px-space-sm text-right text-on-surface font-semibold">10,125</td>
+<td class="py-1 px-space-sm text-right text-on-surface">250</td>
+<td class="py-1 px-space-sm text-right text-primary font-semibold">120</td>
+<td class="py-1 px-space-sm">
+<span class="px-1.5 py-0.5 bg-primary/10 text-primary font-semibold">PARTIAL</span>
+</td>
+<td class="py-1 px-space-sm text-center">
+<button class="px-space-xs py-0.5 bg-surface-container-highest hover:bg-secondary-container text-secondary hover:text-on-secondary font-label-sm text-label-sm uppercase" onclick="cancelOrder(this)" type="button">Batal</button>
+</td>
+</tr>
+<tr class="bg-surface-container hover:bg-surface-bright transition-colors">
+<td class="py-1 px-space-sm text-on-surface-variant">14:15:04</td>
+<td class="py-1 px-space-sm font-bold text-on-surface">BMRI</td>
+<td class="py-1 px-space-sm text-primary font-semibold">BELI</td>
+<td class="py-1 px-space-sm text-right text-on-surface font-semibold">7,175</td>
+<td class="py-1 px-space-sm text-right text-on-surface">150</td>
+<td class="py-1 px-space-sm text-right text-on-surface-variant">0</td>
+<td class="py-1 px-space-sm">
+<span class="px-1.5 py-0.5 bg-tertiary/10 text-tertiary font-semibold">OPEN</span>
+</td>
+<td class="py-1 px-space-sm text-center">
+<button class="px-space-xs py-0.5 bg-surface-container-highest hover:bg-secondary-container text-secondary hover:text-on-secondary font-label-sm text-label-sm uppercase" onclick="cancelOrder(this)" type="button">Batal</button>
+</td>
+</tr>
+<tr class="bg-surface-container-low hover:bg-surface-bright transition-colors">
+<td class="py-1 px-space-sm text-on-surface-variant">13:52:40</td>
+<td class="py-1 px-space-sm font-bold text-on-surface">TLKM</td>
+<td class="py-1 px-space-sm text-secondary font-semibold">JUAL</td>
+<td class="py-1 px-space-sm text-right text-on-surface font-semibold">2,920</td>
+<td class="py-1 px-space-sm text-right text-on-surface">400</td>
+<td class="py-1 px-space-sm text-right text-on-surface-variant">0</td>
+<td class="py-1 px-space-sm">
+<span class="px-1.5 py-0.5 bg-secondary-container/20 text-secondary font-semibold">OPEN</span>
+</td>
+<td class="py-1 px-space-sm text-center">
+<button class="px-space-xs py-0.5 bg-surface-container-highest hover:bg-secondary-container text-secondary hover:text-on-secondary font-label-sm text-label-sm uppercase" onclick="cancelOrder(this)" type="button">Batal</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="xl:col-span-4 bg-surface-container-lowest p-space-sm shadow-sm flex flex-col gap-space-xs">
+<div class="flex items-center justify-between pb-1">
+<div class="flex items-center gap-space-xs">
+<span class="w-1.5 h-1.5 bg-primary animate-ping"></span>
+<span class="font-label-sm text-label-sm text-outline uppercase font-semibold">LIVE TRADE TAPE (TICK FEED)</span>
+</div>
+<span class="font-data-sm text-data-sm text-outline">MATCHED/SEC: 42</span>
+</div>
+<div class="flex justify-between font-label-sm text-label-sm text-outline uppercase bg-surface-container-high px-space-sm py-1">
+<span>TIME</span>
+<span>PRICE</span>
+<span>VOL (LOT)</span>
+<span>BUYER/SELLER</span>
+</div>
+<div class="flex flex-col gap-0.5 overflow-hidden font-data-sm text-data-sm" id="liveTradeTape">
+<div class="flex justify-between items-center px-space-sm py-0.5 bg-surface-container-low">
+<span class="text-on-surface-variant">14:59:58</span>
+<span class="text-primary font-bold">10,150</span>
+<span class="text-on-surface">450</span>
+<span class="text-on-surface-variant font-label-sm">ZP <span class="text-outline">→</span> CC</span>
+</div>
+<div class="flex justify-between items-center px-space-sm py-0.5 bg-surface-container-low">
+<span class="text-on-surface-variant">14:59:55</span>
+<span class="text-primary font-bold">10,150</span>
+<span class="text-on-surface">1,200</span>
+<span class="text-on-surface-variant font-label-sm">AK <span class="text-outline">→</span> YU</span>
+</div>
+<div class="flex justify-between items-center px-space-sm py-0.5 bg-surface-container-low">
+<span class="text-on-surface-variant">14:59:52</span>
+<span class="text-secondary font-bold">10,125</span>
+<span class="text-on-surface">320</span>
+<span class="text-on-surface-variant font-label-sm">PD <span class="text-outline">→</span> ZP</span>
+</div>
+<div class="flex justify-between items-center px-space-sm py-0.5 bg-surface-container-low">
+<span class="text-on-surface-variant">14:59:49</span>
+<span class="text-primary font-bold">10,150</span>
+<span class="text-on-surface">80</span>
+<span class="text-on-surface-variant font-label-sm">NI <span class="text-outline">→</span> SQ</span>
+</div>
+<div class="flex justify-between items-center px-space-sm py-0.5 bg-surface-container-low">
+<span class="text-on-surface-variant">14:59:45</span>
+<span class="text-primary font-bold">10,150</span>
+<span class="text-on-surface">650</span>
+<span class="text-on-surface-variant font-label-sm">ZP <span class="text-outline">→</span> YP</span>
+</div>
+<div class="flex justify-between items-center px-space-sm py-0.5 bg-surface-container-low">
+<span class="text-on-surface-variant">14:59:40</span>
+<span class="text-secondary font-bold">10,125</span>
+<span class="text-on-surface">150</span>
+<span class="text-on-surface-variant font-label-sm">XC <span class="text-outline">→</span> BK</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+  let currentSide = 'BUY';
+  let currentType = 'LIMIT';
+
+  const dropdownBtn = document.getElementById('tickerDropdownBtn');
+  const dropdownMenu = document.getElementById('tickerMenu');
+
+  if (dropdownBtn && dropdownMenu) {
+    dropdownBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      dropdownMenu.classList.toggle('hidden');
+    });
+    document.addEventListener('click', () => {
+      dropdownMenu.classList.add('hidden');
+    });
+  }
+
+  function selectTicker(ticker, price, change) {
+    const btnText = document.querySelector('#tickerDropdownBtn span:first-child');
+    if (btnText) btnText.textContent = ticker;
+
+    const names = {
+      'BBCA': 'PT Bank Central Asia Tbk',
+      'TLKM': 'PT Telkom Indonesia Tbk',
+      'GOTO': 'PT GoTo Gojek Tokopedia Tbk',
+      'BMRI': 'PT Bank Mandiri (Persero) Tbk',
+      'ANTM': 'PT Aneka Tambang Tbk',
+      'ASII': 'PT Astra International Tbk',
+      'ICBP': 'PT Indofood CBP Sukses Makmur Tbk'
+    };
+
+    const titleElem = document.getElementById('tickerFullTitle');
+    if (titleElem && names[ticker]) titleElem.textContent = names[ticker];
+
+    const lp = document.getElementById('lastPrice');
+    const pc = document.getElementById('pctChange');
+    if (lp) lp.textContent = 'Rp ' + price;
+    if (pc) {
+      pc.textContent = change;
+      if (change.startsWith('+')) {
+        pc.className = 'font-data-md text-data-md px-1.5 py-0.5 bg-primary/10 text-primary font-semibold';
+      } else if (change.startsWith('-')) {
+        pc.className = 'font-data-md text-data-md px-1.5 py-0.5 bg-secondary-container/20 text-secondary font-semibold';
+      } else {
+        pc.className = 'font-data-md text-data-md px-1.5 py-0.5 bg-surface-bright text-on-surface-variant font-semibold';
+      }
+    }
+
+    const priceInput = document.getElementById('orderPrice');
+    if (priceInput) {
+      priceInput.value = price.replace(/,/g, '');
+      calcTotal();
+    }
+
+    const submitBtn = document.getElementById('btnSubmitOrder');
+    if (submitBtn) {
+      submitBtn.textContent = `Kirim Order ${currentSide === 'BUY' ? 'Beli' : 'Jual'} ${ticker}`;
+    }
+
+    if (dropdownMenu) dropdownMenu.classList.add('hidden');
+  }
+
+  function switchOrderTab(side) {
+    currentSide = side;
+    const tabBuy = document.getElementById('tabBuy');
+    const tabSell = document.getElementById('tabSell');
+    const submitBtn = document.getElementById('btnSubmitOrder');
+    const ticker = document.querySelector('#tickerDropdownBtn span:first-child')?.textContent || 'BBCA';
+
+    if (side === 'BUY') {
+      tabBuy.className = 'py-1 bg-primary text-on-primary font-headline-sm text-headline-sm font-bold tracking-wide uppercase transition-colors';
+      tabSell.className = 'py-1 bg-surface-container-high text-on-surface-variant hover:text-on-surface font-headline-sm text-headline-sm font-bold tracking-wide uppercase transition-colors';
+      submitBtn.className = 'mt-1 w-full py-2 bg-primary hover:bg-primary-container text-on-primary font-headline-sm text-headline-sm font-bold tracking-wider uppercase transition-colors shadow-md';
+      submitBtn.textContent = `Kirim Order Beli ${ticker}`;
+    } else {
+      tabBuy.className = 'py-1 bg-surface-container-high text-on-surface-variant hover:text-on-surface font-headline-sm text-headline-sm font-bold tracking-wide uppercase transition-colors';
+      tabSell.className = 'py-1 bg-secondary-container text-on-surface font-headline-sm text-headline-sm font-bold tracking-wide uppercase transition-colors';
+      submitBtn.className = 'mt-1 w-full py-2 bg-secondary-container hover:bg-on-secondary text-on-surface font-headline-sm text-headline-sm font-bold tracking-wider uppercase transition-colors shadow-md';
+      submitBtn.textContent = `Kirim Order Jual ${ticker}`;
+    }
+  }
+
+  function switchOrderType(type) {
+    currentType = type;
+    const btnLimit = document.getElementById('typeLimit');
+    const btnMarket = document.getElementById('typeMarket');
+    const priceInput = document.getElementById('orderPrice');
+
+    if (type === 'LIMIT') {
+      btnLimit.className = 'flex-1 py-0.5 bg-surface-container text-primary font-data-sm text-data-sm font-semibold';
+      btnMarket.className = 'flex-1 py-0.5 bg-surface-container-low text-outline hover:text-on-surface font-data-sm text-data-sm font-semibold';
+      if (priceInput) priceInput.disabled = false;
+    } else {
+      btnMarket.className = 'flex-1 py-0.5 bg-surface-container text-primary font-data-sm text-data-sm font-semibold';
+      btnLimit.className = 'flex-1 py-0.5 bg-surface-container-low text-outline hover:text-on-surface font-data-sm text-data-sm font-semibold';
+      if (priceInput) {
+        priceInput.disabled = true;
+        priceInput.value = 'MARKET';
+      }
+    }
+    calcTotal();
+  }
+
+  function adjustPrice(delta) {
+    const input = document.getElementById('orderPrice');
+    if (!input || input.disabled) return;
+    let val = parseInt(input.value, 10) || 10150;
+    val = Math.max(50, val + delta);
+    input.value = val;
+    calcTotal();
+  }
+
+  function adjustLot(delta) {
+    const input = document.getElementById('orderLot');
+    if (!input) return;
+    let val = parseInt(input.value, 10) || 1;
+    val = Math.max(1, val + delta);
+    input.value = val;
+    calcTotal();
+  }
+
+  function setLotPct(pct) {
+    const input = document.getElementById('orderLot');
+    if (!input) return;
+    const power = 100000000;
+    const priceInput = document.getElementById('orderPrice');
+    let price = parseInt(priceInput?.value, 10) || 10150;
+    if (isNaN(price)) price = 10150;
+
+    let lotCost = price * 100 * 1.0015;
+    let maxLots = Math.floor(power / lotCost);
+
+    if (pct === 'MAX' || pct === 100) {
+      input.value = maxLots;
+    } else {
+      input.value = Math.max(1, Math.floor(maxLots * (pct / 100)));
+    }
+    calcTotal();
+  }
+
+  function calcTotal() {
+    const priceInput = document.getElementById('orderPrice');
+    const lotInput = document.getElementById('orderLot');
+    const nominalElem = document.getElementById('orderNominal');
+    const feeElem = document.getElementById('orderFee');
+    const totalElem = document.getElementById('orderTotal');
+
+    let price = parseInt(priceInput?.value, 10);
+    if (isNaN(price)) price = 10150;
+    let lot = parseInt(lotInput?.value, 10) || 0;
+
+    let nominal = price * lot * 100;
+    let fee = Math.round(nominal * 0.0015);
+    let total = currentSide === 'BUY' ? (nominal + fee) : (nominal - fee);
+
+    if (nominalElem) nominalElem.textContent = 'Rp ' + nominal.toLocaleString('id-ID');
+    if (feeElem) feeElem.textContent = 'Rp ' + fee.toLocaleString('id-ID');
+    if (totalElem) totalElem.textContent = 'Rp ' + total.toLocaleString('id-ID');
+  }
+
+  function executeOrder() {
+    const ticker = document.querySelector('#tickerDropdownBtn span:first-child')?.textContent || 'BBCA';
+    const lotInput = document.getElementById('orderLot');
+    const priceInput = document.getElementById('orderPrice');
+    const blotter = document.getElementById('orderBlotterTable');
+    if (!blotter) return;
+
+    const now = new Date();
+    const timeStr = `${String(now.getHours()).padStart(2,'0')}:${String(now.getMinutes()).padStart(2,'0')}:${String(now.getSeconds()).padStart(2,'0')}`;
+    const price = priceInput?.value || '10150';
+    const lot = lotInput?.value || '10';
+
+    const row = document.createElement('tr');
+    row.className = 'bg-surface-container-low hover:bg-surface-bright transition-colors';
+    row.innerHTML = `
+      <td class="py-1 px-space-sm text-on-surface-variant">${timeStr}</td>
+      <td class="py-1 px-space-sm font-bold text-on-surface">${ticker}</td>
+      <td class="py-1 px-space-sm ${currentSide === 'BUY' ? 'text-primary' : 'text-secondary'} font-semibold">${currentSide === 'BUY' ? 'BELI' : 'JUAL'}</td>
+      <td class="py-1 px-space-sm text-right text-on-surface font-semibold">${price}</td>
+      <td class="py-1 px-space-sm text-right text-on-surface">${lot}</td>
+      <td class="py-1 px-space-sm text-right text-on-surface-variant">0</td>
+      <td class="py-1 px-space-sm">
+        <span class="px-1.5 py-0.5 bg-tertiary/10 text-tertiary font-semibold">OPEN</span>
+      </td>
+      <td class="py-1 px-space-sm text-center">
+        <button type="button" class="px-space-xs py-0.5 bg-surface-container-highest hover:bg-secondary-container text-secondary hover:text-on-secondary font-label-sm text-label-sm uppercase" onclick="cancelOrder(this)">Batal</button>
+      </td>
+    `;
+    blotter.prepend(row);
+  }
+
+  function cancelOrder(btn) {
+    const tr = btn.closest('tr');
+    if (tr) {
+      tr.style.opacity = '0.3';
+      btn.textContent = 'BATAL';
+      btn.disabled = true;
+    }
+  }
+
+  const aiBtn = document.getElementById('btnAiAnalyze');
+  if (aiBtn) {
+    aiBtn.addEventListener('click', () => {
+      aiBtn.innerHTML = '<span class="material-symbols-outlined text-[15px] animate-spin">refresh</span><span>Memproses...</span>';
+      setTimeout(() => {
+        aiBtn.innerHTML = '<span class="material-symbols-outlined text-[15px]">check</span><span>Terperbarui</span>';
+        setTimeout(() => {
+          aiBtn.innerHTML = '<span class="material-symbols-outlined text-[15px]">auto_awesome</span><span>Analisa dengan AI</span>';
+        }, 1500);
+      }, 700);
+    });
+  }
+
+  calcTotal();
+</script></main></div></body></html>
