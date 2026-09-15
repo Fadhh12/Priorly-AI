@@ -21,7 +21,7 @@ load_dotenv()  # loads backend/.env if present; safe no-op otherwise
 
 logger = logging.getLogger("tradesim.ai_insight")
 
-GEMINI_MODEL = os.getenv("GEMINI_MODEL", "gemini-2.5-flash-lite")
+GEMINI_MODEL = os.getenv("GEMINI_MODEL", "gemini-flash-lite-latest")
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY", "").strip()
 GEMINI_URL = f"https://generativelanguage.googleapis.com/v1beta/models/{GEMINI_MODEL}:generateContent"
 REQUEST_TIMEOUT_SECONDS = 8.0
