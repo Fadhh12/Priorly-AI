@@ -10,6 +10,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 from pydantic import BaseModel
 
+import ai_insight
 import bot_simulator
 import matching_engine
 import store
@@ -231,6 +232,15 @@ def get_trader(trader_id: str):
     if trader is None:
         raise ApiError(404, "trader_not_found")
     return trader.model_dump()
+
+
+class AiInsightRequest(BaseModel):
+    symbol: str
+
+
+@app.post("/ai/insight")
+async def get_ai_insight(body: AiInsightRequest):
+    return await ai_insight.get_insight(body.symbol)
 
 
 @app.websocket("/ws")

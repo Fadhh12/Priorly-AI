@@ -74,6 +74,24 @@ Frontend berjalan di `http://localhost:3000`, backend di `http://localhost:8000`
 | GET | `/trades/{symbol}` | Riwayat transaksi 1 simbol |
 | GET | `/traders/{trader_id}` | Saldo & posisi trader |
 | WS | `/ws` | Broadcast global: `orderbook_update`, `trade_executed`, `price_update` |
+| POST | `/ai/insight` | Narasi AI Market Insight `{ symbol }` → `{ source: "ai"\|"fallback", insight }` |
+
+### AI Market Insight
+
+Fitur "Analisa dengan AI" memakai Google Gemini API (model `gemini-2.5-flash-lite`, bisa diganti lewat env `GEMINI_MODEL`). Setup:
+
+```bash
+cd backend
+cp .env.example .env
+# isi GEMINI_API_KEY=xxxxx di .env (dapat gratis di Google AI Studio)
+```
+
+Kalau `GEMINI_API_KEY` kosong, atau Gemini gagal/timeout/kena rate limit, sistem **otomatis** pakai narasi fallback rule-based (bukan error) — sesuai FR-14. Hasil di-cache per simbol selama 60 detik (FR-15) dan memakai lock per simbol supaya beberapa request bersamaan untuk simbol yang sama tidak memanggil API dua kali.
+
+**Skenario test manual:**
+1. Tanpa `.env` sama sekali → panggil `POST /ai/insight {"symbol":"BBCA"}` → harus dapat `"source":"fallback"`.
+2. Isi `GEMINI_API_KEY` valid → panggil lagi → harus dapat `"source":"ai"` dengan narasi berbeda tiap simbol.
+3. Panggil endpoint yang sama 2x berturut-turut dalam 60 detik → response kedua harus identik persis (dari cache, bukan panggilan baru ke Gemini).
 
 ## Roadmap
 
@@ -81,7 +99,7 @@ Frontend berjalan di `http://localhost:3000`, backend di `http://localhost:8000`
 - [x] Models & in-memory store
 - [x] Matching engine + unit test
 - [x] REST API & WebSocket + bot simulator
-- [ ] AI Market Insight (Gemini + fallback)
+- [x] AI Market Insight (Gemini + fallback)
 - [ ] Home Page
 - [ ] Trading Dashboard
 - [ ] Cancel order, polish, testing end-to-end
