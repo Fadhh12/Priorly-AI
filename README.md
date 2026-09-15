@@ -45,10 +45,11 @@ Priorly-AI/
 ### Backend
 ```bash
 cd backend
-python -m venv venv
+python -m venv venv        # gunakan Python 3.11-3.13 (belum semua paket punya wheel untuk 3.14)
 venv\Scripts\activate        # Windows
 pip install -r requirements.txt
 uvicorn main:app --reload --port 8000
+pytest                       # jalankan unit test matching engine
 ```
 
 ### Frontend
@@ -63,8 +64,8 @@ Frontend berjalan di `http://localhost:3000`, backend di `http://localhost:8000`
 ## Roadmap
 
 - [x] Setup struktur proyek (frontend + backend)
-- [ ] Models & in-memory store
-- [ ] Matching engine + unit test
+- [x] Models & in-memory store
+- [x] Matching engine + unit test
 - [ ] REST API & WebSocket
 - [ ] AI Market Insight (Gemini + fallback)
 - [ ] Home Page
