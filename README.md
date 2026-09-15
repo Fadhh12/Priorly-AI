@@ -61,6 +61,8 @@ npm run dev
 
 Frontend berjalan di `http://localhost:3000`, backend di `http://localhost:8000`. Begitu backend jalan, 5 "trader bot" otomatis mulai pasang order acak tiap 1-3 detik (lihat `backend/bot_simulator.py`) supaya order book, chart, dan trade feed langsung terlihat hidup tanpa perlu trader sungguhan.
 
+Halaman trading terminal ("Terminal Onyx") ada di `/trading` (order ticket + order book + chart), `/trading/order-book` (depth chart), `/trading/portfolio` (riwayat portofolio), `/trading/analytics` (engine analytics dari `/engine/stats`), dan `/trading/docs` (dokumentasi API interaktif). Design source (mockup Stitch) ada di `stitch_tradesim_trading_simulator/`.
+
 ### API Singkat
 
 | Method | Endpoint | Deskripsi |
@@ -75,6 +77,7 @@ Frontend berjalan di `http://localhost:3000`, backend di `http://localhost:8000`
 | GET | `/traders/{trader_id}` | Saldo & posisi trader |
 | WS | `/ws` | Broadcast global: `orderbook_update`, `trade_executed`, `price_update` |
 | POST | `/ai/insight` | Narasi AI Market Insight `{ symbol }` → `{ source: "ai"\|"fallback", insight }` |
+| GET | `/engine/stats` | Telemetry engine: total order/trade, breakdown status & simbol, uptime, jumlah koneksi WS |
 
 ### AI Market Insight
 
@@ -100,8 +103,8 @@ Kalau `GEMINI_API_KEY` kosong, atau Gemini gagal/timeout/kena rate limit, sistem
 - [x] Matching engine + unit test
 - [x] REST API & WebSocket + bot simulator
 - [x] AI Market Insight (Gemini + fallback)
-- [ ] Home Page
-- [ ] Trading Dashboard
+- [x] Home Page
+- [x] Trading Dashboard (order book, portfolio, analytics, docs)
 - [ ] Cancel order, polish, testing end-to-end
 
 ## Out of Scope (Won't Have)
