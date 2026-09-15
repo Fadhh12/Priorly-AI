@@ -24,23 +24,31 @@ INSTRUMENTS: dict[str, Instrument] = {
     i.symbol: i
     for i in [
         Instrument(symbol="BBCA", name="Bank Central Asia Tbk"),
-        Instrument(symbol="TLKM", name="Telkom Indonesia Tbk"),
-        Instrument(symbol="GOTO", name="GoTo Gojek Tokopedia Tbk"),
-        Instrument(symbol="ANTM", name="Aneka Tambang Tbk"),
+        Instrument(symbol="BBRI", name="Bank Rakyat Indonesia Tbk"),
         Instrument(symbol="BMRI", name="Bank Mandiri Tbk"),
+        Instrument(symbol="BBNI", name="Bank Negara Indonesia Tbk"),
+        Instrument(symbol="TLKM", name="Telkom Indonesia Tbk"),
         Instrument(symbol="ASII", name="Astra International Tbk"),
+        Instrument(symbol="UNVR", name="Unilever Indonesia Tbk"),
         Instrument(symbol="ICBP", name="Indofood CBP Sukses Makmur Tbk"),
+        Instrument(symbol="ANTM", name="Aneka Tambang Tbk"),
+        Instrument(symbol="GOTO", name="GoTo Gojek Tokopedia Tbk"),
     ]
 }
 
+# Base price = perkiraan level harga IDX riil, hanya sebagai titik awal simulasi
+# (bukan feed live — lihat README bagian "Out of Scope" untuk alasannya).
 _BASE_PRICES: dict[str, int] = {
-    "BBCA": 10250,
-    "TLKM": 3980,
-    "GOTO": 84,
-    "ANTM": 1610,
+    "BBCA": 10225,
+    "BBRI": 4850,
     "BMRI": 6725,
+    "BBNI": 5475,
+    "TLKM": 3980,
     "ASII": 5425,
+    "UNVR": 1825,
     "ICBP": 11800,
+    "ANTM": 1610,
+    "GOTO": 84,
 }
 
 orders: dict[str, Order] = {}

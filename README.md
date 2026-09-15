@@ -78,6 +78,7 @@ Diputuskan sadar, bukan kelupaan:
 
 - Autentikasi user sungguhan (login/register) — cukup 1 sesi trader per browser.
 - Persistensi ke database sungguhan — semua state in-memory, reset saat server restart.
+- Feed harga real-time dari bursa asli (IDX) — data live resmi hanya tersedia lewat vendor berbayar/lisensi (RTI, Stockbit, dll), di luar anggaran proyek dummy ini. Base price 10 saham memakai perkiraan level harga IDX riil sebagai titik awal yang realistis, tapi pergerakan selanjutnya tetap simulasi random-walk — bukan feed live, dan tidak ada dependency ke API eksternal (selalu bisa jalan tanpa koneksi ke bursa).
 - Integrasi broker/data pasar asli & kepatuhan regulasi trading nyata.
 
 ## Lisensi
