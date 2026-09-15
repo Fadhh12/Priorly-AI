@@ -4,6 +4,8 @@ exact same place_order() path instead of poking the store directly."""
 
 import asyncio
 import logging
+import time
+from datetime import datetime, timedelta
 
 from fastapi import FastAPI, WebSocket, WebSocketDisconnect
 from fastapi.middleware.cors import CORSMiddleware
@@ -23,7 +25,7 @@ app = FastAPI(title="TradeSim API")
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000"],
+    allow_origins=["http://localhost:3000", "http://localhost:3001", "http://localhost:3002"],
     allow_methods=["*"],
     allow_headers=["*"],
 )
@@ -88,6 +90,7 @@ class ConnectionManager:
 
 
 manager = ConnectionManager()
+START_TIME = time.time()
 
 
 class OrderCreateRequest(BaseModel):
@@ -232,6 +235,37 @@ def get_trader(trader_id: str):
     if trader is None:
         raise ApiError(404, "trader_not_found")
     return trader.model_dump()
+
+
+@app.get("/engine/stats")
+def get_engine_stats():
+    """Real, derivable engine telemetry (Engine Analytics page) — no
+    simulated latency numbers: everything here is a plain count over
+    store.orders/trades/traders or process state, nothing fabricated."""
+    all_orders = list(store.orders.values())
+    all_trades = store.trades
+    cutoff = datetime.utcnow() - timedelta(seconds=60)
+
+    orders_by_status = {status.value: 0 for status in OrderStatus}
+    orders_by_symbol: dict[str, int] = {}
+    for o in all_orders:
+        orders_by_status[o.status.value] += 1
+        orders_by_symbol[o.symbol] = orders_by_symbol.get(o.symbol, 0) + 1
+
+    return {
+        "matching_mode": "Price-Time Priority (FIFO per level)",
+        "self_match_rule": "Skip — order dari trader_id sama tidak saling dieksekusi",
+        "order_book_depth": store.ORDER_BOOK_DEPTH,
+        "uptime_seconds": round(time.time() - START_TIME),
+        "total_orders": len(all_orders),
+        "total_trades": len(all_trades),
+        "orders_by_status": orders_by_status,
+        "orders_by_symbol": orders_by_symbol,
+        "trades_last_60s": sum(1 for t in all_trades if t.executed_at >= cutoff),
+        "ws_connections": len(manager.active),
+        "symbols_tracked": len(store.INSTRUMENTS),
+        "store_records": len(all_orders) + len(all_trades) + len(store.traders),
+    }
 
 
 class AiInsightRequest(BaseModel):
